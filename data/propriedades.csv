@@ -1,0 +1,31 @@
+id_propriedade,Nome,Endereco,Tipo,N_quartos,N_banheiros,Preco_p_noite,Max_hospedes,Min_noites,Max_noites,Taxa_limpeza,Horario_entrada,Horario_saida,CEP,id_locator
+1,Casa do Lago,Rua das Águas 123,Casa inteira,3,2,350.00,6,2,15,50.00,14:00,11:00,12345678,10
+2,Suíte Azul,Rua das Flores 88,Quarto individual,1,1,120.00,2,1,10,NULL,15:00,10:00,23456789,12
+3,Hostel Central,Avenida Brasil 45,Quarto compartilhado,1,2,60.00,4,1,7,10.00,NULL,12:00,34567890,13
+4,Refúgio da Serra,Rua do Pinheiro 321,Casa inteira,4,3,500.00,8,3,20,80.00,16:00,NULL,45678901,13
+5,Apê Moderno,Rua Nova 77,Casa inteira,2,2,280.00,4,2,10,NULL,NULL,10:00,56789012,15
+6,Quarto Zen,Rua Sakura 12,Quarto individual,1,1,90.00,1,1,5,15.00,12:00,09:00,67890123,18
+7,Quarto Compartilhado Roots,Rua das Palmeiras 56,Quarto compartilhado,1,1,55.00,6,1,7,NULL,17:00,11:00,78901234,18
+8,Vila Vintage,Rua do Sol 89,Casa inteira,5,4,750.00,10,3,30,100.00,15:00,10:00,89012345,18
+9,Apê da Júlia,Avenida Central 456,Casa inteira,2,1,230.00,3,2,15,NULL,13:00,11:00,90123456,18
+10,Suíte Tranquila,Rua do Vento 102,Quarto individual,1,1,110.00,2,1,8,10.00,NULL,NULL,01234567,18
+11,Loft Industrial,Rua das Indústrias 500,Casa inteira,1,1,310.00,2,2,12,25.00,15:00,11:00,11223344,20
+12,Quarto da Clara,Rua do Limoeiro 78,Quarto individual,1,1,100.00,1,1,6,NULL,13:00,09:00,22334455,22
+13,Hostel Raízes,Rua das Árvores 31,Quarto compartilhado,1,1,45.00,5,1,4,8.00,16:00,12:00,33445566,22
+14,Casa Verde,Rua Campo Verde 64,Casa inteira,3,2,370.00,6,2,18,NULL,NULL,10:30,44556677,25
+15,Estúdio Central,Rua 7 de Setembro 89,Casa inteira,1,1,200.00,2,1,10,20.00,13:30,NULL,55667788,25
+16,Suíte da Montanha,Rua da Serra Azul 17,Quarto individual,1,1,125.00,2,1,9,NULL,NULL,09:00,66778899,28
+17,Quarto Roots,Rua do Ipê 111,Quarto compartilhado,1,1,50.00,4,1,5,6.00,14:00,10:00,77889900,28
+18,Casa da Beira,Rua do Rio 90,Casa inteira,4,3,480.00,7,2,20,70.00,NULL,10:00,88990011,28
+19,Apê Solar,Rua Aurora 45,Casa inteira,2,1,260.00,3,2,12,NULL,NULL,NULL,99001122,38
+20,Quarto na Vila,Rua dos Pinhais 12,Quarto individual,1,1,95.00,2,1,6,12.00,16:00,10:00,10111213,30
+21,Studio Zen,Rua do Sol Nascente 3,Casa inteira,1,1,195.00,2,2,14,18.00,NULL,NULL,12131415,30
+22,Quarto Aconchegante,Rua do Vale 20,Quarto individual,1,1,105.00,2,1,7,10.00,14:00,09:00,13141516,30
+23,Hostel dos Sonhos,Rua dos Cedros 55,Quarto compartilhado,1,1,60.00,6,1,5,NULL,NULL,10:00,14151617,32
+24,Casa da Colina,Rua das Laranjeiras 22,Casa inteira,3,2,400.00,5,2,16,50.00,12:30,11:30,15161718,32
+25,Apê Azul,Rua do Céu 77,Casa inteira,2,1,270.00,4,2,13,30.00,NULL,10:00,16171819,34
+26,Suíte do Mar,Rua das Ondas 90,Quarto individual,1,1,115.00,1,1,7,NULL,13:00,NULL,17181920,35
+27,Quarto do Sol,Rua da Manhã 21,Quarto compartilhado,1,1,58.00,4,1,6,10.00,NULL,NULL,18192021,35
+28,Casa Branca,Rua do Horizonte 101,Casa inteira,4,3,520.00,9,3,21,NULL,15:00,11:00,19202122,15
+29,Estúdio Minimalista,Rua do Design 5,Casa inteira,1,1,210.00,2,1,11,22.00,14:00,10:00,20212223,12
+30,Quarto da Paz,Rua da Alegria 10,Quarto individual,1,1,100.00,2,1,8,10.00,NULL,NULL,21222324,10

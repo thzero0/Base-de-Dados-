@@ -1,0 +1,31 @@
+id_mensagem,timestamp,texto,id_remetente,id_destinatario
+1,2025-05-01 10:05:12,"Olá, gostaria de confirmar a reserva para o próximo fim de semana!",10,11
+2,2025-05-02 11:12:45,"Sua propriedade está incrível, vamos agendar para o mês que vem.",12,13
+3,2025-05-02 14:21:33,"Gostaria de saber mais sobre o preço para 3 pessoas em novembro.",13,14
+4,2025-05-03 09:32:08,"O check-in foi ótimo, muito obrigado pela hospitalidade!",14,15
+5,2025-05-03 16:42:25,"Estamos pensando em alterar as datas do check-in, você tem disponibilidade?",15,16
+6,2025-05-04 08:05:59,"Eu gostaria de cancelar minha reserva para a próxima semana.",16,17
+7,2025-05-05 10:15:27,"Oi, tem como me enviar mais fotos da casa?",17,18
+8,2025-05-06 11:24:36,"Estou esperando uma confirmação para o pagamento, você pode ajudar?",18,19
+9,2025-05-06 15:30:19,"A casa tem piscina? Gostaria de mais detalhes.",19,20
+10,2025-05-07 18:00:47,"Tivemos um pequeno problema com a reserva, pode nos ajudar a resolver?",20,21
+11,2025-05-08 09:15:02,"Olá, gostaria de saber se há estacionamento disponível para hóspedes.",21,22
+12,2025-05-08 12:40:33,"Como faço para adicionar mais uma pessoa à minha reserva?",22,23
+13,2025-05-09 10:22:19,"Estou tendo problemas para pagar, poderia me dar alguma orientação?",23,24
+14,2025-05-10 08:56:48,"Eu fiz uma reserva, mas não encontrei as instruções do check-in.",24,25
+15,2025-05-10 14:05:39,"Você pode confirmar a reserva para o próximo fim de semana?",25,26
+16,2025-05-11 09:05:59,"Oi, tem alguma recomendação de restaurantes próximos?",26,27
+17,2025-05-12 11:42:14,"Estou com dúvidas sobre o processo de cancelamento, poderia me explicar?",27,28
+18,2025-05-13 10:10:30,"Preciso mudar a data do meu check-in. Existe disponibilidade?",28,29
+19,2025-05-13 13:17:58,"Gostaria de saber mais sobre o bairro onde a propriedade está localizada.",29,30
+20,2025-05-14 09:20:05,"Estou em busca de uma propriedade para 4 pessoas, o que você tem disponível?",30,31
+21,2025-05-14 15:25:19,"Você aceita animais de estimação em sua propriedade?",31,32
+22,2025-05-15 08:45:13,"Quais são as opções de transporte público para a região?",32,33
+23,2025-05-16 09:05:59,"Gostaria de saber se há Wi-Fi disponível no local.",33,34
+24,2025-05-16 14:33:11,"O valor da diária é fixo ou há variações de acordo com a temporada?",34,35
+25,2025-05-17 16:47:22,"Você pode confirmar os detalhes do meu check-out?",35,36
+26,2025-05-18 10:18:33,"Como funciona o pagamento da taxa de limpeza?",36,37
+27,2025-05-19 12:40:55,"A casa oferece utensílios de cozinha? Preciso saber antes de reservar.",37,38
+28,2025-05-20 14:59:02,"Posso adicionar mais noites à minha reserva?",38,39
+29,2025-05-21 13:27:01,"Estou buscando informações sobre a segurança da área, você pode ajudar?",39,10
+30,2025-05-21 17:10:40,"Gostaria de saber se a propriedade aceita pagamento via cartão de crédito.",10,12

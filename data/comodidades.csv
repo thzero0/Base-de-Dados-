@@ -1,0 +1,91 @@
+id_comodidade,Nome,id_propriedade
+1,"Wi-Fi",1
+2,"Ar condicionado",2
+3,"Piscina",3
+4,"Cozinha equipada",4
+5,"Estacionamento",5
+6,"Aquecedor",6
+7,"Lava-louças",7
+8,"Churrasqueira",8
+9,"Banheira",9
+10,"TV a cabo",10
+11,"Micro-ondas",11
+12,"Lavadora de roupas",12
+13,"Secadora de roupas",13
+14,"Espaço para eventos",14
+15,"Elevador",15
+16,"Academia",16
+17,"Quartos com varanda",17
+18,"Forno",18
+19,"Ferro de passar",19
+20,"Serviço de limpeza",20
+21,"Toalhas e lençóis",21
+22,"Área de lazer",22
+23,"Café da manhã incluso",23
+24,"Frigobar",24
+25,"Cama extra",25
+26,"Fogão",26
+27,"Ventilador",27
+28,"Jardim",28
+29,"Suporte para bagagem",29
+30,"Serviço de transporte",30
+31,"Travesseiros extras",1
+32,"Secador de cabelo",2
+33,"Detector de fumaça",3
+34,"Kit de primeiros socorros",4
+35,"Roupões",5
+36,"Mesa de trabalho",6
+37,"Tapetes antialérgicos",7
+38,"Berço disponível",8
+39,"Vista para o mar",9
+40,"Serviço de quarto",10
+41,"Cofre",11
+42,"Espelho de corpo inteiro",12
+43,"Ambiente climatizado",13
+44,"Sistema de som ambiente",14
+45,"Smart TV",15
+46,"Iluminação natural",16
+47,"Cobertores extras",17
+48,"Purificador de ar",18
+49,"Cadeiras reclináveis",19
+50,"Área externa privativa",20
+51,"Tomada perto da cama",21
+52,"Fechadura eletrônica",22
+53,"Utensílios de cozinha",23
+54,"Isolamento acústico",24
+55,"Espaço kids",25
+56,"Filtro de água",26
+57,"Rádio-relógio",27
+58,"Banheiro adaptado",28
+59,"Lareira",29
+60,"Chaleira elétrica",30
+61,"Mesa de jantar",1
+62,"Produtos de higiene",2
+63,"Entrada privativa",3
+64,"Caixa de som Bluetooth",4
+65,"Controle de temperatura",5
+66,"Toalheiro aquecido",6
+67,"Maquina de café",7
+68,"Cortinas blackout",8
+69,"Relógio despertador",9
+70,"Varal de roupas",10
+71,"Acesso por elevador",11
+72,"Roteador dedicado",12
+73,"Assentos ergonômicos",13
+74,"TV com streaming",14
+75,"Sala de estar",15
+76,"Painéis solares",16
+77,"Piso aquecido",17
+78,"Conjunto de panelas",18
+79,"Ventilação natural",19
+80,"Garrafa de água cortesia",20
+81,"Espreguiçadeiras",21
+82,"Tomadas USB",22
+83,"Caixa térmica",23
+84,"Vassoura e rodo",24
+85,"Janela panorâmica",25
+86,"Tábua de passar",26
+87,"Luz de leitura",27
+88,"Cesto de roupas",28
+89,"Luminária de cabeceira",29
+90,"Câmera de segurança",30
