@@ -26,12 +26,12 @@ FROM usuario u
 WHERE u.tipo = 'Ambos';
 
 
-SELECT u.nome, L.cidade, COUNT(p.id_propriedade) AS total_prop, COUNT(r.id_reserva) AS total_locacoes
+SELECT u.nome, L.cidade, COUNT(DISTINCT p.id_propriedade) AS total_prop, COUNT(r.id_reserva) AS total_locacoes
 	
 FROM usuario u
 JOIN localizacao L ON u.cep = L.cep
 JOIN propriedade p ON p.id_locator = u.id_usuario
-JOIN reserva r ON r.id_propriedade = p.id_propriedade
+LEFT JOIN reserva r ON r.id_propriedade = p.id_propriedade
 
 GROUP BY (u.id_usuario, L.cidade)
 HAVING (COUNT(r.id_reserva) >= 5);
