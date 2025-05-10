@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS localizacao CASCADE;
 CREATE TABLE localizacao (
     cep VARCHAR(8) PRIMARY KEY,
     cidade VARCHAR(50) NOT NULL,
@@ -6,6 +7,7 @@ CREATE TABLE localizacao (
     bairro VARCHAR(50)
 );
 
+DROP TABLE IF EXISTS usuario CASCADE;
 CREATE TABLE usuario (
     id_usuario INT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
@@ -23,6 +25,7 @@ CREATE TABLE usuario (
 );
 
 
+DROP TABLE IF EXISTS propriedade CASCADE;
 CREATE TABLE propriedade (
     id_propriedade INT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
@@ -43,6 +46,7 @@ CREATE TABLE propriedade (
     FOREIGN KEY (id_locator) REFERENCES usuario(id_usuario)
 );
 
+DROP TABLE IF EXISTS conta_bancaria CASCADE;
 CREATE TABLE conta_bancaria (
     n_conta VARCHAR(30) PRIMARY KEY,
     n_agencia VARCHAR(30) NOT NULL,
@@ -53,12 +57,14 @@ CREATE TABLE conta_bancaria (
 
 
 
+DROP TABLE IF EXISTS ponto_interesse CASCADE;
 CREATE TABLE ponto_interesse (
     nome VARCHAR(100) PRIMARY KEY,
     cep VARCHAR(8) NOT NULL,
     FOREIGN KEY (cep) REFERENCES localizacao(cep)
 );
 
+DROP TABLE IF EXISTS reserva CASCADE;
 CREATE TABLE reserva (
     id_reserva INT PRIMARY KEY,
     data_reserva DATE NOT NULL,
@@ -76,6 +82,7 @@ CREATE TABLE reserva (
     FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
+DROP TABLE IF EXISTS mensagem CASCADE;
 CREATE TABLE mensagem (
     id_mensagem INT PRIMARY KEY,
     timestamp_ TIMESTAMP NOT NULL,
@@ -86,6 +93,7 @@ CREATE TABLE mensagem (
     FOREIGN KEY (id_destinatario) REFERENCES usuario(id_usuario)
 );
 
+DROP TABLE IF EXISTS regras CASCADE;
 CREATE TABLE regras (
     id_regra INT PRIMARY KEY,
     regra TEXT NOT NULL,
@@ -93,6 +101,7 @@ CREATE TABLE regras (
     FOREIGN KEY (id_propriedade) REFERENCES propriedade(id_propriedade)
 );
 
+DROP TABLE IF EXISTS quartos CASCADE;
 CREATE TABLE quartos (
     id_quarto INT PRIMARY KEY,
     tipo_camas VARCHAR(50) NOT NULL,
@@ -102,6 +111,7 @@ CREATE TABLE quartos (
     FOREIGN KEY (id_propriedade) REFERENCES propriedade(id_propriedade)
 );
 
+DROP TABLE IF EXISTS comodidades CASCADE;
 CREATE TABLE comodidades (
     id_comodidade INT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
@@ -109,6 +119,7 @@ CREATE TABLE comodidades (
     FOREIGN KEY (id_propriedade) REFERENCES propriedade(id_propriedade)
 );
 
+DROP TABLE IF EXISTS datas_disponiveis CASCADE;
 CREATE TABLE datas_disponiveis (
     data_ DATE PRIMARY KEY,
     id_propriedade INT NOT NULL,
@@ -116,6 +127,7 @@ CREATE TABLE datas_disponiveis (
 );
 
 
+DROP TABLE IF EXISTS avaliacao CASCADE;
 CREATE TABLE avaliacao (
     id_avaliacao INT PRIMARY KEY,
     nota_limpeza INT,
@@ -131,6 +143,7 @@ CREATE TABLE avaliacao (
     FOREIGN KEY (id_mensagem) REFERENCES mensagem(id_mensagem)
 );
 
+DROP TABLE IF EXISTS fotos CASCADE;
 CREATE TABLE fotos (
     id_foto INT PRIMARY KEY,
     foto BYTEA NOT NULL,
@@ -251,7 +264,9 @@ INSERT INTO usuario (id_usuario, nome, sobrenome, telefone, cpf, genero, enderec
 (36, 'Aline', 'Carvalho', '11999999927', '12345678927', 'Feminino', 'Rua do Luar 91', 'aline@email.com', 'senha123', 'Locador', '1987-03-23', '18192021'),
 (37, 'Breno', 'Moreira', '11999999928', '12345678928', 'Masculino', 'Rua das Magnólias 101', 'breno@email.com', 'senha123', 'Hospede', '1993-02-12', '19202122'),
 (38, 'Cíntia', 'Sales', '11999999929', '12345678929', 'Feminino', 'Rua da Alegria 14', 'cintia@email.com', 'senha123', 'Ambos', '1998-11-27', '20212223'),
-(39, 'Davi', 'Neves', '11999999930', '12345678930', 'Masculino', 'Rua Nova Esperança 18', 'davi@email.com', 'senha123', 'Ambos', '1996-04-04', '21222324');
+(39, 'Davi', 'Neves', '11999999930', '12345678930', 'Masculino', 'Rua Nova Esperança 18', 'davi@email.com', 'senha123', 'Ambos', '1996-04-04', '21222324'),
+(40, 'Mateus', 'Sales', '11999999931', '12345678931', 'Masculino', 'Rua da Alegria 14', 'mateus@email.com', 'senha123', 'Hospede', '2005-11-27', '20212223'),
+(41, 'Paulo', 'Neves', '11999999932', '12345678932', 'Masculino', 'Rua Nova Esperança 18', 'paulo@email.com', 'senha123', 'Hospede', '2003-04-04', '21222324');
 
 
 INSERT INTO propriedade (id_propriedade, nome, endereco, tipo, n_quartos, n_banheiros, preco_p_noite, max_hospedes, min_noites, max_noites, taxa_limpeza, horario_entrada, horario_saida, cep, id_locator)
@@ -265,27 +280,49 @@ VALUES
 (7, 'Quarto Compartilhado Roots', 'Rua das Palmeiras 56', 'Quarto compartilhado', 1, 1, 55.00, 6, 1, 7, NULL, '17:00', '11:00', '78901234', 18),
 (8, 'Vila Vintage', 'Rua do Sol 89', 'Casa inteira', 5, 4, 750.00, 10, 3, 30, 100.00, '15:00', '10:00', '89012345', 18),
 (9, 'Apê da Júlia', 'Avenida Central 456', 'Casa inteira', 2, 1, 230.00, 3, 2, 15, NULL, '13:00', '11:00', '90123456', 18),
-(10, 'Suíte Tranquila', 'Rua do Vento 102', 'Quarto individual', 1, 1, 110.00, 2, 1, 8, 10.00, NULL, NULL, '01234567', 18),
-(11, 'Loft Industrial', 'Rua das Indústrias 500', 'Casa inteira', 1, 1, 310.00, 2, 2, 12, 25.00, '15:00', '11:00', '11223344', 20),
+(10, 'Suíte Tranquila', 'Rua do Vento 102', 'Quarto individual', 1, 1, 110.00, 2, 1, 8, 10.00, NULL, NULL, '22334455', 18),
+(11, 'Loft Industrial', 'Rua das Indústrias 500', 'Casa inteira', 1, 1, 310.00, 2, 2, 12, 25.00, '15:00', '11:00', '22334455', 20),
 (12, 'Quarto da Clara', 'Rua do Limoeiro 78', 'Quarto individual', 1, 1, 100.00, 1, 1, 6, NULL, '13:00', '09:00', '22334455', 22),
-(13, 'Hostel Raízes', 'Rua das Árvores 31', 'Quarto compartilhado', 1, 1, 45.00, 5, 1, 4, 8.00, '16:00', '12:00', '33445566', 22),
+(13, 'Hostel Raízes', 'Rua das Árvores 31', 'Quarto compartilhado', 1, 1, 45.00, 5, 1, 4, 8.00, '16:00', '12:00', '22334455', 22),
 (14, 'Casa Verde', 'Rua Campo Verde 64', 'Casa inteira', 3, 2, 370.00, 6, 2, 18, NULL, NULL, '10:30', '44556677', 25),
 (15, 'Estúdio Central', 'Rua 7 de Setembro 89', 'Casa inteira', 1, 1, 200.00, 2, 1, 10, 20.00, '13:30', NULL, '55667788', 25),
-(16, 'Suíte da Montanha', 'Rua da Serra Azul 17', 'Quarto individual', 1, 1, 125.00, 2, 1, 9, NULL, NULL, '09:00', '66778899', 28),
-(17, 'Quarto Roots', 'Rua do Ipê 111', 'Quarto compartilhado', 1, 1, 50.00, 4, 1, 5, 6.00, '14:00', '10:00', '77889900', 28),
+(16, 'Suíte da Montanha', 'Rua da Serra Azul 17', 'Quarto individual', 1, 1, 125.00, 2, 1, 9, NULL, NULL, '09:00', '55667788', 28),
+(17, 'Quarto Roots', 'Rua do Ipê 111', 'Quarto compartilhado', 1, 1, 50.00, 4, 1, 5, 6.00, '14:00', '10:00', '55667788', 28),
 (18, 'Casa da Beira', 'Rua do Rio 90', 'Casa inteira', 4, 3, 480.00, 7, 2, 20, 70.00, NULL, '10:00', '88990011', 28),
 (19, 'Apê Solar', 'Rua Aurora 45', 'Casa inteira', 2, 1, 260.00, 3, 2, 12, NULL, NULL, NULL, '99001122', 38),
 (20, 'Quarto na Vila', 'Rua dos Pinhais 12', 'Quarto individual', 1, 1, 95.00, 2, 1, 6, 12.00, '16:00', '10:00', '10111213', 30),
 (21, 'Studio Zen', 'Rua do Sol Nascente 3', 'Casa inteira', 1, 1, 195.00, 2, 2, 14, 18.00, NULL, NULL, '12131415', 30),
-(22, 'Quarto Aconchegante', 'Rua do Vale 20', 'Quarto individual', 1, 1, 105.00, 2, 1, 7, 10.00, '14:00', '09:00', '13141516', 30),
+(22, 'Quarto Aconchegante', 'Rua do Vale 20', 'Quarto individual', 1, 1, 105.00, 2, 1, 7, 10.00, '14:00', '09:00', '10111213', 30),
 (23, 'Hostel dos Sonhos', 'Rua dos Cedros 55', 'Quarto compartilhado', 1, 1, 60.00, 6, 1, 5, NULL, NULL, '10:00', '14151617', 32),
-(24, 'Casa da Colina', 'Rua das Laranjeiras 22', 'Casa inteira', 3, 2, 400.00, 5, 2, 16, 50.00, '12:30', '11:30', '15161718', 32),
+(24, 'Casa da Colina', 'Rua das Laranjeiras 22', 'Casa inteira', 3, 2, 400.00, 5, 2, 16, 50.00, '12:30', '11:30', '14151617', 32),
 (25, 'Apê Azul', 'Rua do Céu 77', 'Casa inteira', 2, 1, 270.00, 4, 2, 13, 30.00, NULL, '10:00', '16171819', 34),
 (26, 'Suíte do Mar', 'Rua das Ondas 90', 'Quarto individual', 1, 1, 115.00, 1, 1, 7, NULL, '13:00', NULL, '17181920', 35),
 (27, 'Quarto do Sol', 'Rua da Manhã 21', 'Quarto compartilhado', 1, 1, 58.00, 4, 1, 6, 10.00, NULL, NULL, '18192021', 35),
 (28, 'Casa Branca', 'Rua do Horizonte 101', 'Casa inteira', 4, 3, 520.00, 9, 3, 21, NULL, '15:00', '11:00', '19202122', 15),
 (29, 'Estúdio Minimalista', 'Rua do Design 5', 'Casa inteira', 1, 1, 210.00, 2, 1, 11, 22.00, '14:00', '10:00', '20212223', 12),
-(30, 'Quarto da Paz', 'Rua da Alegria 10', 'Quarto individual', 1, 1, 100.00, 2, 1, 8, 10.00, NULL, NULL, '21222324', 10);
+(30, 'Quarto da Guerra', 'Rua da Alegria 10', 'Quarto individual', 1, 1, 100.00, 2, 1, 8, 10.00, NULL, NULL, '21222324', 10),
+(31, 'Casa da Esperança', 'Rua das Laranjeiras 22', 'Casa inteira', 3, 2, 400.00, 5, 2, 16, 50.00, '12:30', '11:30', '21222324', 32),
+(32, 'Apê Laranja', 'Rua do Céu 77', 'Casa inteira', 2, 1, 270.00, 4, 2, 13, 30.00, NULL, '10:00', '21222324', 34),
+(33, 'Suíte do Mar', 'Rua das Ondas 90', 'Quarto individual', 1, 1, 115.00, 1, 1, 7, NULL, '13:00', NULL, '21222324', 35),
+(34, 'Quarto do Sol', 'Rua da Manhã 21', 'Quarto compartilhado', 1, 1, 58.00, 4, 1, 6, 10.00, NULL, NULL, '21222324', 35),
+(35, 'Casa Branca', 'Rua do Horizonte 101', 'Casa inteira', 4, 3, 520.00, 9, 3, 21, NULL, '15:00', '11:00', '21222324', 15),
+(36, 'Estúdio Minimalista', 'Rua do Design 5', 'Casa inteira', 1, 1, 210.00, 2, 1, 11, 22.00, '14:00', '10:00', '21222324', 12),
+(37, 'Quarto da Paz', 'Rua da Alegria 10', 'Quarto individual', 1, 1, 100.00, 2, 1, 8, 10.00, NULL, NULL, '21222324', 10),
+(38, 'Casa da Esperança', 'Rua das Laranjeiras 22', 'Casa inteira', 3, 2, 400.00, 5, 2, 16, 50.00, '12:30', '11:30', '21222324', 10),
+(39, 'Apê Laranja', 'Rua do Céu 77', 'Casa inteira', 2, 1, 270.00, 4, 2, 13, 30.00, NULL, '10:00', '21222324', 10),
+(40, 'Suíte do Mar', 'Rua das Ondas 90', 'Quarto individual', 1, 1, 115.00, 1, 1, 7, NULL, '13:00', NULL, '21222324', 10),
+(41, 'Quarto do Sol', 'Rua da Manhã 21', 'Quarto compartilhado', 1, 1, 58.00, 4, 1, 6, 10.00, NULL, NULL, '21222324', 10),
+(42, 'Casa Branca', 'Rua do Horizonte 101', 'Casa inteira', 4, 3, 520.00, 9, 3, 21, NULL, '15:00', '11:00', '21222324', 10),
+(43, 'Estúdio Minimalista', 'Rua do Design 5', 'Casa inteira', 1, 1, 210.00, 2, 1, 11, 22.00, '14:00', '10:00', '21222324', 10),
+(44, 'Quarto da Paz', 'Rua da Alegria 10', 'Quarto individual', 1, 1, 100.00, 2, 1, 8, 10.00, NULL, NULL, '21222324', 10),
+(45, 'Loft Industrial', 'Rua das Indústrias 500', 'Casa inteira', 1, 1, 310.00, 2, 2, 12, 25.00, '15:00', '11:00', '85858585', 23),
+(46, 'Quarto da Clara', 'Rua do Limoeiro 78', 'Quarto individual', 1, 1, 100.00, 1, 1, 6, NULL, '13:00', '09:00', '85858585', 23),
+(47, 'Hostel Raízes', 'Rua das Árvores 31', 'Quarto compartilhado', 1, 1, 45.00, 5, 1, 4, 8.00, '16:00', '12:00', '85858585', 23),
+(48, 'Casa Verde', 'Rua Campo Verde 64', 'Casa inteira', 3, 2, 370.00, 6, 2, 18, NULL, NULL, '10:30', '85858585', 23),
+(49, 'Estúdio Central', 'Rua 7 de Setembro 89', 'Casa inteira', 1, 1, 200.00, 2, 1, 10, 20.00, '13:30', NULL, '85858585', 23),
+(50, 'Suíte da Montanha', 'Rua da Serra Azul 17', 'Quarto individual', 1, 1, 125.00, 2, 1, 9, NULL, NULL, '09:00', '85858585', 23),
+(51, 'Quarto Roots', 'Rua do Ipê 111', 'Quarto compartilhado', 1, 1, 50.00, 4, 1, 5, 6.00, '14:00', '10:00', '85858585', 23),
+(52, 'Casa da Beira', 'Rua do Rio 90', 'Casa inteira', 4, 3, 480.00, 7, 2, 20, 70.00, NULL, '10:00', '85858585', 23);
 
 
 INSERT INTO regras (id_regra, regra, id_propriedade) VALUES
@@ -543,27 +580,44 @@ VALUES
 (7, '2025-05-07', '2025-05-11', '2025-05-13', 4, 60, 50, 250, 360, 'Confirmada', 7, 16),
 (8, '2025-05-08', '2025-05-12', '2025-05-14', 2, NULL, 20, 100, 145, 'Pendente', 8, 18),
 (9, '2025-05-09', '2025-05-13', '2025-05-15', 1, 20, NULL, 120, 170, 'Confirmada', 9, 19),
-(10, '2025-05-10', '2025-05-14', '2025-05-18', 5, 80, 60, NULL, 440, 'Confirmada', 10, 19),
-(11, '2025-05-11', '2025-05-15', '2025-05-17', 3, 35, 30, 150, NULL, 'Cancelada', 11, 20),
-(12, '2025-05-12', '2025-05-16', '2025-05-18', 2, 30, 25, 140, 195, 'Confirmada', 12, 21),
-(13, '2025-05-13', '2025-05-17', '2025-05-19', 4, 45, 40, 200, 285, 'Pendente', 13, 23),
-(14, '2025-05-14', '2025-05-18', '2025-05-20', 2, 20, 30, 110, 160, 'Confirmada', 14, 23),
-(15, '2025-05-15', '2025-05-19', '2025-05-21', 1, 10, 15, 80, 105, 'Confirmada', 15, 24),
-(16, '2025-05-16', '2025-05-20', '2025-05-22', 3, 25, 25, 130, 180, 'Cancelada', 16, 25),
-(17, '2025-05-17', '2025-05-21', '2025-05-23', 2, 40, NULL, 150, 225, 'Confirmada', 17, 27),
-(18, '2025-05-18', '2025-05-22', '2025-05-24', 4, 60, 55, 230, 345, 'Confirmada', 18, 27),
-(19, '2025-05-19', '2025-05-23', '2025-05-25', 1, 10, 20, 90, NULL, 'Pendente', 19, 28),
-(20, '2025-05-20', '2025-05-24', '2025-05-26', 3, 30, NULL, 140, 200, 'Confirmada', 20, 30),
-(21, '2025-05-21', '2025-05-25', '2025-05-27', 2, 25, 20, NULL, 145, 'Cancelada', 21, 30),
-(22, '2025-05-22', '2025-05-26', '2025-05-30', 1, 10, 25, 110, 145, 'Confirmada', 22, 31),
+(10, '2025-06-10', '2025-06-14', '2025-06-18', 5, 80, 60, NULL, 440, 'Confirmada', 10, 19),
+(11, '2025-06-11', '2025-06-15', '2025-06-17', 3, 35, 30, 150, NULL, 'Cancelada', 11, 20),
+(12, '2025-06-12', '2025-06-16', '2025-06-18', 2, 30, 25, 140, 195, 'Confirmada', 12, 21),
+(13, '2025-06-13', '2025-06-17', '2025-06-19', 4, 45, 40, 200, 285, 'Pendente', 13, 23),
+(14, '2025-06-14', '2025-06-18', '2025-06-20', 2, 20, 30, 110, 160, 'Confirmada', 14, 23),
+(15, '2025-06-15', '2025-06-19', '2025-06-21', 1, 10, 15, 80, 105, 'Confirmada', 15, 24),
+(16, '2025-06-16', '2025-06-20', '2025-06-22', 3, 25, 25, 130, 180, 'Cancelada', 16, 25),
+(17, '2025-06-17', '2025-06-21', '2025-06-23', 2, 40, NULL, 150, 225, 'Confirmada', 17, 27),
+(18, '2025-06-18', '2025-06-22', '2025-06-24', 4, 60, 55, 230, 345, 'Confirmada', 18, 27),
+(19, '2025-06-19', '2025-06-23', '2025-06-25', 1, 10, 20, 90, NULL, 'Pendente', 19, 28),
+(20, '2025-06-20', '2025-06-24', '2025-06-26', 3, 30, NULL, 140, 200, 'Confirmada', 20, 30),
+(21, '2025-06-21', '2025-06-25', '2025-06-27', 2, 25, 20, NULL, 145, 'Cancelada', 21, 30),
+(22, '2025-06-22', '2025-06-26', '2025-06-30', 1, 10, 25, 110, 145, 'Confirmada', 22, 31),
 (23, '2025-05-23', '2025-05-27', '2025-05-29', 3, NULL, 35, 140, 205, 'Confirmada', 23, 32),
 (24, '2025-05-24', '2025-05-28', '2025-06-01', 5, 70, 60, 300, 430, 'Confirmada', 24, 33),
 (25, '2025-05-25', '2025-05-29', '2025-05-31', 2, 20, 25, NULL, 145, 'Cancelada', 25, 35),
 (26, '2025-05-26', '2025-05-30', '2025-06-01', 1, NULL, 15, 90, 115, 'Confirmada', 26, 35),
-(27, '2025-05-27', '2025-05-31', '2025-06-02', 2, 25, 20, 110, 155, 'Confirmada', 27, 37),
-(28, '2025-05-28', '2025-06-01', '2025-06-03', 3, 30, 30, NULL, 200, 'Pendente', 28, 37),
-(29, '2025-05-29', '2025-06-02', '2025-06-04', 4, NULL, 45, 220, 315, 'Confirmada', 29, 38),
-(30, '2025-05-30', '2025-06-03', '2025-06-05', 2, 20, 25, 100, NULL, 'Cancelada', 30, 39);
+(31, '2025-05-01', '2025-05-05', '2025-05-10', 2, 50, 30, 200, 300, 'Confirmada', 31, 11),
+(32, '2025-05-02', '2025-05-06', '2025-05-08', 1, 20, 25, 100, 145, 'Confirmada', 32, 11),
+(33, '2025-05-03', '2025-05-07', '2025-05-09', 3, 30, NULL, 150, 215, 'Pendente', 33, 12),
+(34, '2025-05-04', '2025-05-08', '2025-05-12', 2, NULL, 40, 180, 260, 'Confirmada', 34, 14),
+(35, '2025-07-05', '2025-07-09', '2025-07-11', 2, 15, 20, NULL, 125, 'Cancelada', 35, 14),
+(36, '2025-07-06', '2025-07-10', '2025-07-15', 1, 10, 30, 120, NULL, 'Confirmada', 36, 15),
+(37, '2025-07-07', '2025-07-11', '2025-07-13', 4, 60, 50, 250, 360, 'Confirmada', 37, 16),
+(38, '2025-07-08', '2025-07-12', '2025-07-14', 2, NULL, 20, 100, 145, 'Pendente', 38, 18),
+(39, '2025-07-09', '2025-07-13', '2025-07-15', 1, 20, NULL, 120, 170, 'Confirmada', 39, 19),
+(40, '2025-07-10', '2025-07-14', '2025-07-18', 5, 80, 60, NULL, 440, 'Confirmada', 40, 19),
+(41, '2025-07-11', '2025-07-15', '2025-07-17', 3, 35, 30, 150, NULL, 'Cancelada', 41, 20),
+(42, '2025-07-12', '2025-07-16', '2025-07-18', 2, 30, 25, 140, 195, 'Confirmada', 42, 21),
+(43, '2025-07-13', '2025-07-17', '2025-07-19', 4, 45, 40, 200, 285, 'Pendente', 43, 23),
+(44, '2025-05-14', '2025-05-18', '2025-05-20', 2, 20, 30, 110, 160, 'Confirmada', 44, 23),
+(45, '2025-05-15', '2025-05-19', '2025-05-21', 1, 10, 15, 80, 105, 'Confirmada', 45, 24),
+(46, '2025-05-16', '2025-05-20', '2025-05-22', 3, 25, 25, 130, 180, 'Cancelada', 46, 25),
+(47, '2025-05-17', '2025-05-21', '2025-05-23', 2, 40, NULL, 150, 225, 'Confirmada', 47, 27),
+(48, '2025-05-18', '2025-05-22', '2025-05-24', 4, 60, 55, 230, 345, 'Confirmada', 48, 27),
+(49, '2025-05-19', '2025-05-23', '2025-05-25', 1, 10, 20, 90, NULL, 'Pendente', 49, 28),
+(50, '2025-05-20', '2025-05-24', '2025-05-26', 3, 30, NULL, 140, 200, 'Confirmada', 50, 30),
+(51, '2025-05-21', '2025-05-25', '2025-05-27', 2, 25, 20, NULL, 145, 'Cancelada', 51, 30);
 
 
 INSERT INTO conta_bancaria (n_conta, n_agencia, tipo_conta, id_usuario) VALUES
