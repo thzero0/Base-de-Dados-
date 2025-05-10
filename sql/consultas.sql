@@ -11,7 +11,7 @@ SELECT L.cidade, Count(*)
 FROM localizacao L JOIN propriedade p 
 USING (cep) 
 GROUP BY cidade;
-
+ORDER BY count DESC
 
 SELECT r.id_reserva, r.id_propriedade, r.id_usuario, (r.data_check_out - r.data_check_in) as dias_locados, u2.nome as nome_prop, u1.nome as nome_hosp, ROUND(r.preco_total / (r.data_check_out - r.data_check_in), 2) as preco_diaria 
 FROM reserva r  
