@@ -1,3 +1,17 @@
+
+/*
+  Consultas SQL para o projeto de banco de dados
+  Grupo: 14
+  Alunos:
+
+  -Clara Ernesto de Carvalho - 14559479
+  -Gabriel Barbosa dos Santos - 14613991
+  -Renan Parpinelli Scarpin - 14712188
+  -Thiago Zero Araujo - 11814183
+
+*/
+
+-- Criação da tabela localizacao
 DROP TABLE IF EXISTS localizacao CASCADE;
 CREATE TABLE localizacao (
     cep VARCHAR(8) PRIMARY KEY,
@@ -7,6 +21,7 @@ CREATE TABLE localizacao (
     bairro VARCHAR(50)
 );
 
+-- Criação da tabela usuario
 DROP TABLE IF EXISTS usuario CASCADE;
 CREATE TABLE usuario (
     id_usuario INT PRIMARY KEY,
@@ -24,7 +39,7 @@ CREATE TABLE usuario (
     FOREIGN KEY (cep) REFERENCES localizacao(cep)
 );
 
-
+-- Criação da tabela propriedade
 DROP TABLE IF EXISTS propriedade CASCADE;
 CREATE TABLE propriedade (
     id_propriedade INT PRIMARY KEY,
@@ -46,6 +61,7 @@ CREATE TABLE propriedade (
     FOREIGN KEY (id_locator) REFERENCES usuario(id_usuario)
 );
 
+-- Criação da tabela conta_bancaria
 DROP TABLE IF EXISTS conta_bancaria CASCADE;
 CREATE TABLE conta_bancaria (
     n_conta VARCHAR(30) PRIMARY KEY,
@@ -56,7 +72,7 @@ CREATE TABLE conta_bancaria (
 );
 
 
-
+-- Criação da tabela ponto_interesse
 DROP TABLE IF EXISTS ponto_interesse CASCADE;
 CREATE TABLE ponto_interesse (
     nome VARCHAR(100) PRIMARY KEY,
@@ -64,6 +80,8 @@ CREATE TABLE ponto_interesse (
     FOREIGN KEY (cep) REFERENCES localizacao(cep)
 );
 
+
+-- Criação da tabela reserva
 DROP TABLE IF EXISTS reserva CASCADE;
 CREATE TABLE reserva (
     id_reserva INT PRIMARY KEY,
@@ -82,6 +100,7 @@ CREATE TABLE reserva (
     FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
+-- Criação da tabela mensagem
 DROP TABLE IF EXISTS mensagem CASCADE;
 CREATE TABLE mensagem (
     id_mensagem INT PRIMARY KEY,
@@ -93,6 +112,7 @@ CREATE TABLE mensagem (
     FOREIGN KEY (id_destinatario) REFERENCES usuario(id_usuario)
 );
 
+-- Criação da tabela regras
 DROP TABLE IF EXISTS regras CASCADE;
 CREATE TABLE regras (
     id_regra INT PRIMARY KEY,
@@ -101,6 +121,7 @@ CREATE TABLE regras (
     FOREIGN KEY (id_propriedade) REFERENCES propriedade(id_propriedade)
 );
 
+-- Criação da tabela quartos
 DROP TABLE IF EXISTS quartos CASCADE;
 CREATE TABLE quartos (
     id_quarto INT PRIMARY KEY,
@@ -111,6 +132,7 @@ CREATE TABLE quartos (
     FOREIGN KEY (id_propriedade) REFERENCES propriedade(id_propriedade)
 );
 
+-- Criação da tabela comodidades
 DROP TABLE IF EXISTS comodidades CASCADE;
 CREATE TABLE comodidades (
     id_comodidade INT PRIMARY KEY,
@@ -119,6 +141,7 @@ CREATE TABLE comodidades (
     FOREIGN KEY (id_propriedade) REFERENCES propriedade(id_propriedade)
 );
 
+-- Criação da tabela datas_disponiveis
 DROP TABLE IF EXISTS datas_disponiveis CASCADE;
 CREATE TABLE datas_disponiveis (
     id_data INT PRIMARY KEY,
@@ -128,7 +151,7 @@ CREATE TABLE datas_disponiveis (
 );
 
 
-
+-- Criação da tabela avaliacao
 DROP TABLE IF EXISTS avaliacao CASCADE;
 CREATE TABLE avaliacao (
     id_avaliacao INT PRIMARY KEY,
@@ -145,6 +168,7 @@ CREATE TABLE avaliacao (
     FOREIGN KEY (id_mensagem) REFERENCES mensagem(id_mensagem)
 );
 
+-- Criação da tabela fotos
 DROP TABLE IF EXISTS fotos CASCADE;
 CREATE TABLE fotos (
     id_foto INT PRIMARY KEY,
@@ -158,8 +182,9 @@ CREATE TABLE fotos (
 );
 
 
-
-INSERT INTO localizacao (cep, cidade, estado, pais, bairro) VALUES
+-- Inserção de dados na tabela localizacao
+INSERT INTO localizacao (cep, cidade, estado, pais, bairro)
+VALUES
 ('12345678', 'São Paulo', 'SP', 'Brasil', 'Jardins'),
 ('87654321', 'Rio de Janeiro', 'RJ', 'Brasil', NULL),
 ('34567890', 'Belo Horizonte', 'MG', 'Brasil', 'Savassi'),
@@ -202,8 +227,9 @@ INSERT INTO localizacao (cep, cidade, estado, pais, bairro) VALUES
 ('84848484', 'Natal', 'RN', 'Brasil', 'Lagoa Nova'),
 ('85858585', 'Manaus', 'AM', 'Brasil', 'Centro');
 
-
-INSERT INTO ponto_interesse (nome, cep) VALUES 
+-- Inserção de dados na tabela ponto_interesse
+INSERT INTO ponto_interesse (nome, cep) 
+VALUES 
 ('Parque Ibirapuera', '12345678'),
 ('Museu do Amanhã', '87654321'),
 ('Praça da Liberdade', '34567890'),
@@ -235,8 +261,9 @@ INSERT INTO ponto_interesse (nome, cep) VALUES
 ('Theatro Sete de Abril', '20212223'),
 ('Parque da Cidade', '21222324');
 
-
-INSERT INTO usuario (id_usuario, nome, sobrenome, telefone, cpf, genero, endereco, email, senha, tipo, data_nascimento, cep) VALUES
+-- Inserção de dados na tabela usuario
+INSERT INTO usuario (id_usuario, nome, sobrenome, telefone, cpf, genero, endereco, email, senha, tipo, data_nascimento, cep)
+VALUES
 (10, 'Ana', 'Silva', '11999999901', '12345678901', 'Feminino', 'Rua das Palmeiras 10', 'ana.silva@email.com', 'senha123', 'Locador', '1985-06-12', '30303030'),
 (11, 'Bruno', 'Souza', '11999999902', '12345678902', 'Masculino', 'Rua dos Cedros 44', 'bruno.souza@email.com', 'senha123', 'Hospede', '1990-03-22', '40404040'),
 (12, 'Camila', 'Oliveira', '11999999903', '12345678903', 'Feminino', 'Rua da Aurora 77', 'camila.o@email.com', 'senha123', 'Ambos', '1995-01-10', '34567890'),
@@ -270,7 +297,7 @@ INSERT INTO usuario (id_usuario, nome, sobrenome, telefone, cpf, genero, enderec
 (40, 'Mateus', 'Sales', '11999999931', '12345678931', 'Masculino', 'Rua da Alegria 14', 'mateus@email.com', 'senha123', 'Hospede', '2005-11-27', '20212223'),
 (41, 'Paulo', 'Neves', '11999999932', '12345678932', 'Masculino', 'Rua Nova Esperança 18', 'paulo@email.com', 'senha123', 'Hospede', '2003-04-04', '21222324');
 
-
+-- Inserção de dados na tabela propriedade
 INSERT INTO propriedade (id_propriedade, nome, endereco, tipo, n_quartos, n_banheiros, preco_p_noite, max_hospedes, min_noites, max_noites, taxa_limpeza, horario_entrada, horario_saida, cep, id_locator)
 VALUES
 (1, 'Casa do Lago', 'Rua das Águas 123', 'Casa inteira', 3, 2, 350.00, 6, 2, 15, 50.00, '14:00', '11:00', '12345678', 10),
@@ -326,8 +353,9 @@ VALUES
 (51, 'Quarto Roots', 'Rua do Ipê 111', 'Quarto compartilhado', 1, 1, 50.00, 4, 1, 5, 6.00, '14:00', '10:00', '85858585', 23),
 (52, 'Casa da Beira', 'Rua do Rio 90', 'Casa inteira', 4, 3, 480.00, 7, 2, 20, 70.00, NULL, '10:00', '85858585', 23);
 
-
-INSERT INTO regras (id_regra, regra, id_propriedade) VALUES
+-- Inserção de dados na tabela regras
+INSERT INTO regras (id_regra, regra, id_propriedade)
+VALUES
 (1, 'Proibido fumar nas dependências', 1),
 (2, 'Não é permitido fazer festas ou eventos', 2),
 (3, 'Animais de estimação não são permitidos', 3),
@@ -359,8 +387,9 @@ INSERT INTO regras (id_regra, regra, id_propriedade) VALUES
 (29, 'Os hóspedes devem cumprir as normas de segurança contra incêndio', 29),
 (30, 'É proibido o uso de drogas ilícitas nas dependências da propriedade', 30);
 
-
-INSERT INTO quartos (id_quarto, tipo_camas, banheiro_privativo, qtd_camas, id_propriedade) VALUES
+-- Inserção de dados na tabela quartos
+INSERT INTO quartos (id_quarto, tipo_camas, banheiro_privativo, qtd_camas, id_propriedade)
+VALUES
 (1, 'Cama de casal', TRUE, 1, 1),
 (2, 'Cama de solteiro', FALSE, 2, 1),
 (3, 'Cama de casal', TRUE, 1, 2),
@@ -422,8 +451,9 @@ INSERT INTO quartos (id_quarto, tipo_camas, banheiro_privativo, qtd_camas, id_pr
 (59, 'Cama de casal', TRUE, 1, 30),
 (60, 'Cama de solteiro', TRUE, 2, 30);
 
-
-INSERT INTO comodidades (id_comodidade, nome, id_propriedade) VALUES
+-- Inserção de dados na tabela comodidades
+INSERT INTO comodidades (id_comodidade, nome, id_propriedade)
+VALUES
 (1, 'Wi-Fi', 1),
 (2, 'Ar condicionado', 2),
 (3, 'Piscina', 3),
@@ -515,8 +545,9 @@ INSERT INTO comodidades (id_comodidade, nome, id_propriedade) VALUES
 (89, 'Luminária de cabeceira', 29),
 (90, 'Câmera de segurança', 30);
 
-
-INSERT INTO datas_disponiveis (id_data, data_, id_propriedade) VALUES
+-- Inserção de dados na tabela datas_disponiveis
+INSERT INTO datas_disponiveis (id_data, data_, id_propriedade)
+VALUES
 (1, '2025-05-10', 1),
 (2, '2025-05-11', 1),
 (3, '2025-05-12', 2),
@@ -570,7 +601,7 @@ INSERT INTO datas_disponiveis (id_data, data_, id_propriedade) VALUES
 (51, '2025-06-29', 24),
 (52, '2025-06-30', 25);
 
-
+-- Inserção de dados na tabela reserva
 INSERT INTO reserva (id_reserva, data_reserva, data_check_in, data_check_out, n_hospedes, imposto_pago, taxa_limpeza, preco_estadia, preco_total, status, id_propriedade, id_usuario)
 VALUES 
 (1, '2025-05-01', '2025-05-05', '2025-05-10', 2, 50, 30, 200, 300, 'Confirmada', 1, 11),
@@ -621,8 +652,9 @@ VALUES
 (50, '2025-05-20', '2025-05-24', '2025-05-26', 3, 30, NULL, 140, 200, 'Confirmada', 50, 30),
 (51, '2025-05-21', '2025-05-25', '2025-05-27', 2, 25, 20, NULL, 145, 'Cancelada', 51, 30);
 
-
-INSERT INTO conta_bancaria (n_conta, n_agencia, tipo_conta, id_usuario) VALUES
+-- Inserção de dados na tabela conta_bancaria
+INSERT INTO conta_bancaria (n_conta, n_agencia, tipo_conta, id_usuario)
+VALUES
 ('100001', '1234', 'Corrente', 10),
 ('100003', '3456', 'Corrente', 12),
 ('100005', '5678', 'Poupança', 13),
@@ -646,8 +678,9 @@ INSERT INTO conta_bancaria (n_conta, n_agencia, tipo_conta, id_usuario) VALUES
 ('100029', '2121', 'Poupança', 38),
 ('100030', '2222', 'Corrente', 39);
 
-
-INSERT INTO mensagem (id_mensagem, timestamp_, texto, id_remetente, id_destinatario) VALUES
+-- Inserção de dados na tabela mensagem
+INSERT INTO mensagem (id_mensagem, timestamp_, texto, id_remetente, id_destinatario)
+VALUES
 (1, '2025-05-01 10:05:12', 'Olá, gostaria de confirmar a reserva para o próximo fim de semana!', 10, 11),
 (2, '2025-05-02 11:12:45', 'Sua propriedade está incrível, vamos agendar para o mês que vem.', 12, 13),
 (3, '2025-05-02 14:21:33', 'Gostaria de saber mais sobre o preço para 3 pessoas em novembro.', 13, 14),
@@ -679,8 +712,9 @@ INSERT INTO mensagem (id_mensagem, timestamp_, texto, id_remetente, id_destinata
 (29, '2025-05-21 13:27:01', 'Estou buscando informações sobre a segurança da área, você pode ajudar?', 39, 10),
 (30, '2025-05-21 17:10:40', 'Gostaria de saber se a propriedade aceita pagamento via cartão de crédito.', 10, 12);
 
-
-INSERT INTO avaliacao (id_avaliacao, nota_limpeza, nota_estrutura, nota_comunicacao, nota_localizacao, nota_preco, id_propriedade, id_usuario, id_mensagem) VALUES
+-- Inserção de dados na tabela avaliacao
+INSERT INTO avaliacao (id_avaliacao, nota_limpeza, nota_estrutura, nota_comunicacao, nota_localizacao, nota_preco, id_propriedade, id_usuario, id_mensagem)
+VALUES
 (1, 4.5, 4.0, 5.0, 4.8, 4.2, 21, 18, 1),
 (2, NULL, 3.0, 4.0, 3.8, 3.7, 17, 33, 2),
 (3, 5.0, 5.0, 5.0, 5.0, 5.0, 10, 23, 3),
@@ -712,8 +746,9 @@ INSERT INTO avaliacao (id_avaliacao, nota_limpeza, nota_estrutura, nota_comunica
 (29, 4.9, 5.0, NULL, 4.9, 5.0, 29, 21, 29),
 (30, 2.5, 2.5, 2.5, 2.5, 2.5, 15, 23, 30);
 
-
-INSERT INTO fotos (id_foto, foto, id_avaliacao, id_propriedade, id_usuario) VALUES
+-- Inserção de dados na tabela fotos
+INSERT INTO fotos (id_foto, foto, id_avaliacao, id_propriedade, id_usuario)
+VALUES
 (1, 'foto1.jpg', 1, 21, 18),
 (2, 'foto2.jpg', 2, 17, 33),
 (3, 'foto3.jpg', 3, 10, 23),
