@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   db:
@@ -8,7 +8,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: pgadmin
-      POSTGRES_DB: trabalho3
+      POSTGRES_DB: trabalhofinal
     ports:
       - "5432:5432"
     volumes:
@@ -31,3 +31,4 @@ services:
 volumes:
   postgres_data:
   pgadmin_data:
+

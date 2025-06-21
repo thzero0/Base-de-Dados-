@@ -18,7 +18,7 @@ Este ambiente Docker Compose levanta dois containers:
 1. Abra um terminal no mesmo diretório onde está localizado o arquivo `postgres.yaml`.
 2. Execute o comando abaixo para iniciar os serviços:
 
-```bash 
+```bash
 docker compose -f postgres.yaml up -d
 ```
 
@@ -27,14 +27,15 @@ Como acessar o pgAdmin
 
 Após os containers subirem, abra seu navegador e acesse:
 
-```bash 
+```bash
 localhost:5050
 ```
 
 ### 🛠️ Utilizando o PgAdmin
+
 Faça login usando as credenciais definidas no docker-compose:
 
-- E-mail: admin@admin.com
+- E-mail: <admin@admin.com>
 
 - Senha: admin
 
@@ -48,7 +49,7 @@ Vá até a aba “Connection” e preencha os campos assim:
 
 - Port: 5432
 
-- Maintenance database: trabalho3
+- Maintenance database: trabalhofinal
 
 - Username: postgres
 
@@ -56,19 +57,14 @@ Vá até a aba “Connection” e preencha os campos assim:
 
 Clique em “Save” e você estará conectado ao banco!
 
-
 ### 🛑 Como parar os containers
 
 Para derrubar os containers, execute:
 
-```bash 
+```bash
 docker compose -f postgres.yaml down
 ```
 
 Isso irá parar e remover os containers, mas os dados persistem nos volumes (postgres_data e pgadmin_data).
+
 - Caso queira excluir os volumes, adicione a flag -v ao final do comando
-
-
-
-
-
