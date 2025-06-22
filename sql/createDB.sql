@@ -114,6 +114,7 @@ DROP TABLE IF EXISTS Disciplina CASCADE;
 CREATE TABLE
     Disciplina (
         Codigo INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+        Nome VARCHAR(50) NOT NULL,
         QtdAulasSemanais INTEGER NOT NULL,
         MaterialDidatico VARCHAR(300),
         NomeUnidade VARCHAR(50) REFERENCES Unidade (NomeUnidade)

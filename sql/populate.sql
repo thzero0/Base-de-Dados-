@@ -198,26 +198,26 @@ INSERT INTO Curso (Nome, Nivel, CargaHoraria, NumeroVagas, Ementa, CodigoDeparta
 INSERT INTO Curso (Nome, Nivel, CargaHoraria, NumeroVagas, Ementa, CodigoDepartamento, NomeUnidadeSalaPadrao, NumeroSalaPadrao, NomeUnidadeCurso) VALUES ('Curso de Artes', 'Fundamental', 132, 98, 'Ementa do curso de artes', 18, 'Escola de Artes', 18, 'Instituto de Química');
 INSERT INTO Curso (Nome, Nivel, CargaHoraria, NumeroVagas, Ementa, CodigoDepartamento, NomeUnidadeSalaPadrao, NumeroSalaPadrao, NomeUnidadeCurso) VALUES ('Curso de Matemática', 'Fundamental', 101, 165, 'Ementa do curso de matemática', 19, 'Instituto de Matemática', 19, 'Instituto de Computação');
 INSERT INTO Curso (Nome, Nivel, CargaHoraria, NumeroVagas, Ementa, CodigoDepartamento, NomeUnidadeSalaPadrao, NumeroSalaPadrao, NomeUnidadeCurso) VALUES ('Curso de Turismo', 'Fundamental', 164, 37, 'Ementa do curso de turismo', 20, 'Faculdade de Turismo', 20, 'Escola de Artes');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (2, 'Material didático 1', 'Faculdade de Arquitetura');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (6, 'Material didático 2', 'Instituto de Biologia');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (5, 'Material didático 3', 'Escola de Comunicação');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (3, 'Material didático 4', 'Faculdade de Odontologia');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (5, 'Material didático 5', 'Escola de Administração');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (2, 'Material didático 6', 'Escola de Artes');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (6, 'Material didático 7', 'Faculdade de Educação');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (6, 'Material didático 8', 'Escola de Música');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (4, 'Material didático 9', 'Instituto de Física');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (4, 'Material didático 10', 'Faculdade de Odontologia');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (4, 'Material didático 11', 'Faculdade de Direito');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (2, 'Material didático 12', 'Instituto de Química');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (1, 'Material didático 13', 'Faculdade de Psicologia');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (1, 'Material didático 14', 'Instituto de Matemática');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (5, 'Material didático 15', 'Instituto de Química');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (5, 'Material didático 16', 'Instituto de Química');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (1, 'Material didático 17', 'Instituto de Computação');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (6, 'Material didático 18', 'Faculdade de Medicina');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (2, 'Material didático 19', 'Instituto de Computação');
-INSERT INTO Disciplina (QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES (1, 'Material didático 20', 'Faculdade de Psicologia');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Arquitetura Contemporânea', 2, 'Projeto Arquitetônico Contemporâneo', 'Faculdade de Arquitetura');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Biologia Molecular', 6, 'Biologia Molecular da Célula', 'Instituto de Biologia');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Teoria da Comunicação', 5, 'Teoria da Comunicação', 'Escola de Comunicação');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Endodontia Avançada', 3, 'Princípios de Endodontia', 'Faculdade de Odontologia');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Administração Geral', 5, 'Administração: Teoria, Processo e Prática', 'Escola de Administração');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('História da Arte', 2, 'História da Arte', 'Escola de Artes');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Fundamentos da Pedagogia', 6, 'Fundamentos da Educação', 'Faculdade de Educação');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Teoria Musical', 6, 'Teoria Musical para Iniciantes', 'Escola de Música');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Física Geral I', 4, 'Fundamentos de Física', 'Instituto de Física');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Prótese Dentária', 4, 'Odontologia Preventiva', 'Faculdade de Odontologia');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Introdução ao Direito', 4, 'Introdução ao Estudo do Direito', 'Faculdade de Direito');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Química Orgânica I', 2, 'Química Orgânica', 'Instituto de Química');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Introdução à Psicologia', 1, 'Introdução à Psicologia', 'Faculdade de Psicologia');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Cálculo Diferencial I', 1, 'Cálculo Volume 1', 'Instituto de Matemática');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Química Inorgânica Avançada', 5, 'Química Inorgânica', 'Instituto de Química');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Química Analítica Aplicada', 5, 'Química Analítica', 'Instituto de Química');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Algoritmos e Estruturas de Controle', 1, 'Algoritmos: Teoria e Prática', 'Instituto de Computação');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Semiologia Médica', 6, 'Semiologia Médica', 'Faculdade de Medicina');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Estruturas de Dados', 2, 'Estruturas de Dados com Java', 'Instituto de Computação');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Psicologia Social', 1, 'Psicologia Social', 'Faculdade de Psicologia');
 INSERT INTO Oferecimento (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, TipoPeriodoLetivo, MaxAlunos, NomeUnidadeSala, NumeroSala) VALUES (1, 'André', 'Barbosa', '(11) 98517-3340', '2025-01-01', 'Semestral', 19, 'Faculdade de Engenharia', 1);
 INSERT INTO Oferecimento (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, TipoPeriodoLetivo, MaxAlunos, NomeUnidadeSala, NumeroSala) VALUES (2, 'Renata', 'Pinto', '(11) 99830-5304', '2025-01-31', 'Anual', 75, 'Faculdade de Medicina', 2);
 INSERT INTO Oferecimento (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, TipoPeriodoLetivo, MaxAlunos, NomeUnidadeSala, NumeroSala) VALUES (3, 'Carlos', 'Freitas', '(11) 97543-6930', '2025-01-01', 'Semestral', 40, 'Instituto de Computação', 3);
@@ -298,26 +298,46 @@ INSERT INTO DataLimiteDeMatricula (CodigoDisciplina, NomeProf, SobrenomeProf, Te
 INSERT INTO DataLimiteDeMatricula (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataLimite) VALUES (18, 'Simone', 'Ferreira', '(11) 94470-9835', '2025-01-31', '2025-04-01');
 INSERT INTO DataLimiteDeMatricula (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataLimite) VALUES (19, 'Thiago', 'Moreira', '(11) 96107-7537', '2025-01-01', '2025-03-02');
 INSERT INTO DataLimiteDeMatricula (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataLimite) VALUES (20, 'Fernanda', 'Nogueira', '(11) 98177-9479', '2025-01-31', '2025-04-01');
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('João', 'Silva', '(11) 92824-1409', 1, 'André', 'Barbosa', '(11) 98517-3340', '2025-01-01', 'Avaliação 1', 5, 5, 1, 5);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Maria', 'Souza', '(11) 93286-2679', 2, 'Renata', 'Pinto', '(11) 99830-5304', '2025-01-31', 'Avaliação 2', 1, 4, 5, 5);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Pedro', 'Costa', '(11) 97912-1520', 3, 'Carlos', 'Freitas', '(11) 97543-6930', '2025-01-01', 'Avaliação 3', 5, 3, 3, 2);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Ana', 'Santos', '(11) 94811-9279', 4, 'Tatiana', 'Cardoso', '(11) 99085-2489', '2025-01-31', 'Avaliação 4', 3, 2, 3, 4);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Lucas', 'Oliveira', '(11) 94257-9928', 5, 'Ricardo', 'Lopes', '(11) 93621-7916', '2025-01-01', 'Avaliação 5', 2, 3, 4, 3);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Beatriz', 'Pereira', '(11) 95557-1106', 6, 'Larissa', 'Vieira', '(11) 97252-8668', '2025-01-31', 'Avaliação 6', 1, 1, 4, 5);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Rafael', 'Rodrigues', '(11) 95552-3547', 7, 'Fernando', 'Araujo', '(11) 91188-2876', '2025-01-01', 'Avaliação 7', 5, 1, 1, 5);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Camila', 'Almeida', '(11) 92519-7224', 8, 'Paula', 'Dias', '(11) 95371-6573', '2025-01-31', 'Avaliação 8', 2, 5, 3, 2);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Gabriel', 'Nascimento', '(11) 96635-5333', 9, 'Leandro', 'Cavalcante', '(11) 93591-8433', '2025-01-01', 'Avaliação 9', 3, 1, 2, 3);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Fernanda', 'Lima', '(11) 93045-7201', 10, 'Sofia', 'Melo', '(11) 99201-3927', '2025-01-31', 'Avaliação 10', 3, 2, 4, 5);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Felipe', 'Araújo', '(11) 96925-4150', 11, 'Marcelo', 'Freitas', '(11) 95889-9317', '2025-01-01', 'Avaliação 11', 3, 5, 5, 1);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Larissa', 'Fernandes', '(11) 94733-5741', 12, 'Gabriela', 'Peixoto', '(11) 97126-3646', '2025-01-31', 'Avaliação 12', 5, 3, 1, 2);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Bruno', 'Carvalho', '(11) 92654-7227', 13, 'Daniel', 'Moraes', '(11) 91009-6310', '2025-01-01', 'Avaliação 13', 3, 1, 1, 5);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Juliana', 'Gomes', '(11) 96977-3664', 14, 'Isabela', 'Cunha', '(11) 96947-6038', '2025-01-31', 'Avaliação 14', 2, 3, 3, 5);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Gustavo', 'Martins', '(11) 95374-2169', 15, 'Rodrigo', 'Teixeira', '(11) 92290-2403', '2025-01-01', 'Avaliação 15', 2, 3, 2, 3);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Patrícia', 'Rocha', '(11) 99751-5010', 16, 'Carolina', 'Barros', '(11) 99727-3060', '2025-01-31', 'Avaliação 16', 5, 4, 3, 1);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Matheus', 'Ribeiro', '(11) 95422-4598', 17, 'Eduardo', 'Castro', '(11) 93705-5342', '2025-01-01', 'Avaliação 17', 1, 4, 3, 1);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Aline', 'Alves', '(11) 91916-4752', 18, 'Simone', 'Ferreira', '(11) 94470-9835', '2025-01-31', 'Avaliação 18', 1, 3, 2, 3);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Diego', 'Monteiro', '(11) 95386-2084', 19, 'Thiago', 'Moreira', '(11) 96107-7537', '2025-01-01', 'Avaliação 19', 2, 4, 5, 4);
-INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala) VALUES ('Mariana', 'Mendes', '(11) 96155-4483', 20, 'Fernanda', 'Nogueira', '(11) 98177-9479', '2025-01-31', 'Avaliação 20', 5, 1, 1, 1);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('João', 'Silva', '(11) 92824-1409', 1, 'André', 'Barbosa', '(11) 98517-3340', '2025-01-01', 'Gostei muito desta disciplina! Conteúdo bem organizado e claro.', 5, 5, 1, 5);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Maria', 'Souza', '(11) 93286-2679', 2, 'Renata', 'Pinto', '(11) 99830-5304', '2025-01-31', 'A disciplina foi desafiadora, mas muito enriquecedora.', 1, 4, 5, 5);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Pedro', 'Costa', '(11) 97912-1520', 3, 'Carlos', 'Freitas', '(11) 97543-6930', '2025-01-01', 'Material didático relevante e exemplos práticos foram ótimos.', 5, 3, 3, 2);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Ana', 'Santos', '(11) 94811-9279', 4, 'Tatiana', 'Cardoso', '(11) 99085-2489', '2025-01-31', 'Professor atencioso e conduziu bem as aulas.', 3, 2, 3, 4);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Lucas', 'Oliveira', '(11) 94257-9928', 5, 'Ricardo', 'Lopes', '(11) 93621-7916', '2025-01-01', 'Gostaria de mais exercícios práticos, mas o conteúdo é excelente.', 2, 3, 4, 3);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Beatriz', 'Pereira', '(11) 95557-1106', 6, 'Larissa', 'Vieira', '(11) 97252-8668', '2025-01-31', 'Avaliação justa, mas infraestrutura da sala precisa melhorar.', 1, 1, 4, 5);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Rafael', 'Rodrigues', '(11) 95552-3547', 7, 'Fernando', 'Araujo', '(11) 91188-2876', '2025-01-01', 'Excelente abordagem teórica e prática equilibrada.', 5, 1, 1, 5);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Camila', 'Almeida', '(11) 92519-7224', 8, 'Paula', 'Dias', '(11) 95371-6573', '2025-01-31', 'Conteúdo atualizado e útil para a carreira.', 2, 5, 3, 2);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Gabriel', 'Nascimento', '(11) 96635-5333', 9, 'Leandro', 'Cavalcante', '(11) 93591-8433', '2025-01-01', 'Dinâmicas de grupo fizeram diferença no aprendizado.', 3, 1, 2, 3);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Fernanda', 'Lima', '(11) 93045-7201', 10, 'Sofia', 'Melo', '(11) 99201-3927', '2025-01-31', 'Carga horária adequada e boa interação com alunos.', 3, 2, 4, 5);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Felipe', 'Araújo', '(11) 96925-4150', 11, 'Marcelo', 'Freitas', '(11) 95889-9317', '2025-01-01', 'Materiais de apoio muito bem selecionados.', 3, 5, 5, 1);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Larissa', 'Fernandes', '(11) 94733-5741', 12, 'Gabriela', 'Peixoto', '(11) 97126-3646', '2025-01-31', 'O professor demonstrou domínio do assunto e motivou a turma.', 5, 3, 1, 2);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Bruno', 'Carvalho', '(11) 92654-7227', 13, 'Daniel', 'Moraes', '(11) 91009-6310', '2025-01-01', 'Estudos de caso foram muito produtivos.', 3, 1, 1, 5);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Juliana', 'Gomes', '(11) 96977-3664', 14, 'Isabela', 'Cunha', '(11) 96947-6038', '2025-01-31', 'Achei a disciplina essencial para minha formação.', 2, 3, 3, 5);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Gustavo', 'Martins', '(11) 95374-2169', 15, 'Rodrigo', 'Teixeira', '(11) 92290-2403', '2025-01-01', 'Metodologia ativa facilitou meu entendimento.', 2, 3, 2, 3);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Patrícia', 'Rocha', '(11) 99751-5010', 16, 'Carolina', 'Barros', '(11) 99727-3060', '2025-01-31', 'A sala estava bem equipada e o ambiente agradável.', 5, 4, 3, 1);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Matheus', 'Ribeiro', '(11) 95422-4598', 17, 'Eduardo', 'Castro', '(11) 93705-5342', '2025-01-01', 'O ritmo das aulas foi adequado e bem dinâmico.', 1, 4, 3, 1);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Aline', 'Alves', '(11) 91916-4752', 18, 'Simone', 'Ferreira', '(11) 94470-9835', '2025-01-31', 'Gostei dos debates promovidos em sala de aula.', 1, 3, 2, 3);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Diego', 'Monteiro', '(11) 95386-2084', 19, 'Thiago', 'Moreira', '(11) 96107-7537', '2025-01-01', 'Feedback construtivo nas avaliações ajudou a melhorar.', 2, 4, 5, 4);
+INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
+VALUES ('Mariana', 'Mendes', '(11) 96155-4483', 20, 'Fernanda', 'Nogueira', '(11) 98177-9479', '2025-01-31', 'Conteúdo prático e teórico bem balanceado.', 5, 1, 1, 1);
 INSERT INTO Notas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Nota) VALUES ('João', 'Silva', '(11) 92824-1409', 1, 'André', 'Barbosa', '(11) 98517-3340', '2025-01-01', 9.45);
 INSERT INTO Notas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Nota) VALUES ('Maria', 'Souza', '(11) 93286-2679', 2, 'Renata', 'Pinto', '(11) 99830-5304', '2025-01-31', 6.91);
 INSERT INTO Notas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Nota) VALUES ('Pedro', 'Costa', '(11) 97912-1520', 3, 'Carlos', 'Freitas', '(11) 97543-6930', '2025-01-01', 1.49);
@@ -418,46 +438,46 @@ INSERT INTO PreReqCurso (CodigoCurso, CodigoCursoPreReq) VALUES (17, 20);
 INSERT INTO PreReqCurso (CodigoCurso, CodigoCursoPreReq) VALUES (18, 1);
 INSERT INTO PreReqCurso (CodigoCurso, CodigoCursoPreReq) VALUES (19, 2);
 INSERT INTO PreReqCurso (CodigoCurso, CodigoCursoPreReq) VALUES (20, 3);
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 1');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 2');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 3');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 4');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 5');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 6');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 7');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 8');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 9');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 10');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 11');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 12');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 13');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 14');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 15');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 16');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 17');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 18');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 19');
-INSERT INTO Mensagem (Texto) VALUES ('Mensagem 20');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 1', 'Carlos', 'Freitas', '(11) 97543-6930');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 2', 'Mariana', 'Mendes', '(11) 96155-4483');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 3', 'Felipe', 'Dantas', '(11) 92604-1828');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 4', 'Leandro', 'Tavares', '(11) 98350-3296');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 5', 'Mariana', 'Pacheco', '(11) 91960-3697');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 6', 'Gustavo', 'Martins', '(11) 95374-2169');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 7', 'Gustavo', 'Martins', '(11) 95374-2169');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 8', 'Maria', 'Souza', '(11) 93286-2679');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 9', 'Bruno', 'Castro', '(11) 91964-4750');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 10', 'Bruno', 'Carvalho', '(11) 92654-7227');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 11', 'Larissa', 'Vieira', '(11) 97252-8668');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 12', 'Renata', 'Pinto', '(11) 99830-5304');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 13', 'Aline', 'Alves', '(11) 91916-4752');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 14', 'Mariana', 'Pacheco', '(11) 91960-3697');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 15', 'Lucas', 'Oliveira', '(11) 94257-9928');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 16', 'Natália', 'Medeiros', '(11) 92790-5073');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 17', 'Aline', 'Alves', '(11) 91916-4752');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 18', 'Carlos', 'Freitas', '(11) 97543-6930');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 19', 'Lorena', 'Ramos', '(11) 94770-4608');
-INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Aviso importante 20', 'Daniel', 'Moraes', '(11) 91009-6310');
+INSERT INTO Mensagem (Texto) VALUES ('A prova de quarta foi adiada para sexta-feira.');
+INSERT INTO Mensagem (Texto) VALUES ('Entrega do trabalho final de Arquitetura: dia 10/07.');
+INSERT INTO Mensagem (Texto) VALUES ('Seminário de Biologia Molecular na próxima segunda, às 14h.');
+INSERT INTO Mensagem (Texto) VALUES ('A biblioteca estará fechada no feriado de 12 de junho.');
+INSERT INTO Mensagem (Texto) VALUES ('Recursos da disciplina de Direito atualizados no site.');
+INSERT INTO Mensagem (Texto) VALUES ('Aulas práticas de Química Inorgânica transferidas para o laboratório B.');
+INSERT INTO Mensagem (Texto) VALUES ('Palestra de Psicologia Social: 15/07, Auditório Principal.');
+INSERT INTO Mensagem (Texto) VALUES ('Workshop de Algoritmos em Python: inscrições até 05/07.');
+INSERT INTO Mensagem (Texto) VALUES ('Sessão de feedback de TCC agendada para dia 22/06.');
+INSERT INTO Mensagem (Texto) VALUES ('Manutenção no laboratório de Informática amanhã das 8h às 12h.');
+INSERT INTO Mensagem (Texto) VALUES ('Sessão de orientação de estágio em Administração: quarta, 16h.');
+INSERT INTO Mensagem (Texto) VALUES ('Filme educativo na Escola de Artes, 18/07, Sala 3.');
+INSERT INTO Mensagem (Texto) VALUES ('Visita técnica ao museu de Física: 25/06, saída às 9h.');
+INSERT INTO Mensagem (Texto) VALUES ('Aula extra de Cálculo Diferencial para revisão: quinta, 10h.');
+INSERT INTO Mensagem (Texto) VALUES ('Seminário de Semiologia Médica com casos clínicos: 27/06.');
+INSERT INTO Mensagem (Texto) VALUES ('Data limite para inscrição no intercâmbio: 30/06.');
+INSERT INTO Mensagem (Texto) VALUES ('Nova edição do periódico de Computação disponível online.');
+INSERT INTO Mensagem (Texto) VALUES ('Encontro de ex-alunos da Faculdade de Medicina: 20/07.');
+INSERT INTO Mensagem (Texto) VALUES ('Campanha de doação de sangue no campus: 29 e 30 de junho.');
+INSERT INTO Mensagem (Texto) VALUES ('Pesquisa de satisfação: responda até 28/06 e ganhe certificado.');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Segunda-feira haverá manutenção dos ar-condicionados das 15h às 16h.', 'Carlos', 'Freitas', '(11) 97543-6930');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Prazo para entrega do relatório de estágio encerra-se em 05/07.', 'Mariana', 'Mendes', '(11) 96155-4483');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Biblioteca fechará mais cedo amanhã, às 18h.', 'Felipe', 'Dantas', '(11) 92604-1828');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Inscrições para a oficina de fotografia terminam na sexta-feira.', 'Leandro', 'Tavares', '(11) 98350-3296');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Gincana estudantil será no próximo sábado, às 9h, no ginásio.', 'Mariana', 'Pacheco', '(11) 91960-3697');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Reunião do conselho de curso toda terça-feira, sala 101.', 'Gustavo', 'Martins', '(11) 95374-2169');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Novo regulamento de estágio disponível no portal acadêmico.', 'Gustavo', 'Martins', '(11) 95374-2169');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Atualização do sistema de matrícula programada para quinta-feira.', 'Maria', 'Souza', '(11) 93286-2679');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Palestra sobre saúde mental dia 15/07 às 14h no auditório principal.', 'Bruno', 'Castro', '(11) 91964-4750');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Entrega de certificados do curso intensivo dia 20/07, sala 203.', 'Bruno', 'Carvalho', '(11) 92654-7227');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Bloqueio de acesso ao estacionamento na quarta-feira, 22/06.', 'Larissa', 'Vieira', '(11) 97252-8668');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Teste de laboratório de química reagendado para 30/06.', 'Renata', 'Pinto', '(11) 99830-5304');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Avaliação diagnóstica de matemática no domingo, 28/06.', 'Aline', 'Alves', '(11) 91916-4752');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Formulários de avaliação docente até 01/07 no portal.', 'Mariana', 'Pacheco', '(11) 91960-3697');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Visita técnica à usina hidrelétrica em 10/07, saída às 7h.', 'Lucas', 'Oliveira', '(11) 94257-9928');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Campanha de doação de livros inicia na próxima segunda.', 'Natália', 'Medeiros', '(11) 92790-5073');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Limpeza geral no campus prevista para o feriado, dia 07/09.', 'Aline', 'Alves', '(11) 91916-4752');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Acesso ao Wi-Fi central será interrompido para manutenção em 23/06.', 'Carlos', 'Freitas', '(11) 97543-6930');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Feira de profissões no estacionamento principal, dia 05/08.', 'Lorena', 'Ramos', '(11) 94770-4608');
+INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Pintura de sinalização das salas será feita neste fim de semana.', 'Daniel', 'Moraes', '(11) 91009-6310');
 INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente) VALUES (1, 'Larissa', 'Campos', '(11) 96413-2160', 'Bruno', 'Carvalho', '(11) 92654-7227');
 INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente) VALUES (2, 'Renata', 'Pinto', '(11) 99830-5304', 'Aline', 'Alves', '(11) 91916-4752');
 INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente) VALUES (3, 'Camila', 'Almeida', '(11) 92519-7224', 'João', 'Silva', '(11) 92824-1409');
