@@ -10,20 +10,25 @@ CREATE VIEW InformacoesDepartamento as
         d.NomeProfChefe, 
         d.SobrenomeProfChefe, 
         d.TelefoneProfChefe, 
-        p.Email as EmailChefe, 
-        p.CEP as CEPchefe, 
-        p.Numero as NumeroCasaChefe, 
+        u.Email as EmailChefe, 
+        u.CEP as CEPchefe, 
+        u.Numero as NumeroCasaChefe, 
         p.Especializacao as EspecilizacaoChefe, 
         p.Titulacao as TitulacaoChefe,
         Count(c.CodigoUnico) as QtdCursos
-
             FROM Departamento d 
                 LEFT JOIN Curso c ON c.CodigoDepartamento = d.Codigo
                 LEFT JOIN Professor p
                     ON p.NomeProf = d.NomeProfChefe
                     AND p.SobrenomeProf = d.SobrenomeProfChefe
                     AND p.TelefoneProf = d.TelefoneProfChefe 
-            GROUP BY d.Codigo, d.Nome, d.NomeProfChefe, d.SobrenomeProfChefe, d.TelefoneProfChefe, p.Email, p.CEP, p.Numero, p.Especializacao, p.Titulacao;
+                LEFT JOIN Usuario u
+                    ON u.Nome = p.NomeProf 
+                    AND u.Sobrenome = p.SobrenomeProf 
+                    AND u.Telefone = p.TelefoneProf
+            GROUP BY d.Codigo, d.Nome, d.NomeProfChefe, d.SobrenomeProfChefe, d.TelefoneProfChefe, u.Email, u.CEP, u.Numero, p.Especializacao, p.Titulacao;
+
+
 
 /*
 -- CONSULTA USANDO A VIEW DE CIMA
@@ -67,7 +72,7 @@ CREATE VIEW MediasEscolares as
                 GROUP BY 
                     n.NomeAluno, n.SobrenomeAluno, n.TelefoneAluno, n.CodigoDisciplina, 
                     n.NomeProf, n.SobrenomeProf, n.TelefoneProf, n.InicioPeriodoLetivo
-            ) as MediaAlunoNessaDisciplina md
+            ) md
             ON m.NomeAluno = md.NomeAluno
             AND m.SobrenomeAluno = md.SobrenomeAluno
             AND m.TelefoneAluno = md.TelefoneAluno

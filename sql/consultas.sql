@@ -13,9 +13,9 @@ SELECT DISTINCT s.NomeUnidade, s.NumeroSala
             ON s.NomeUnidade = o.NomeUnidadeSala 
             AND s.NumeroSala = o.NumeroSala
     WHERE 
-        p.NomeProf = '?'
-        AND p.SobrenomeProf = '?'
-        AND p.TelefoneProf = '?';
+        p.NomeProf = 'Carlos'
+        AND p.SobrenomeProf = 'Freitas'
+        AND p.TelefoneProf = '(11) 97543-6930';
 
 
 
@@ -30,7 +30,7 @@ SELECT
     a.NomeAluno, 
     a.SobrenomeAluno, 
     a.TelefoneAluno, 
-    AVG(md.MediaDisciplina) as Media, 
+    ROUND(AVG(md.MediaDisciplina), 2) as Media,
     Count(*) as NroDisciplinasCursadas
     FROM ALUNO a
         LEFT JOIN Matricula m 
@@ -46,7 +46,7 @@ SELECT
             GROUP BY 
                 n.NomeAluno, n.SobrenomeAluno, n.TelefoneAluno, n.CodigoDisciplina, 
                 n.NomeProf, n.SobrenomeProf, n.TelefoneProf, n.InicioPeriodoLetivo
-        ) as MediaAlunoNessaDisciplina md
+        ) md
         ON m.NomeAluno = md.NomeAluno
         AND m.SobrenomeAluno = md.SobrenomeAluno
         AND m.TelefoneAluno = md.TelefoneAluno
@@ -78,9 +78,9 @@ SELECT
         JOIN Disciplina d
             ON d.Codigo = o.CodigoDisciplina
     WHERE 
-        p.NomeProf = '?'
-        AND p.SobrenomeProf = '?'
-        AND p.TelefoneProf = '?'
+        p.NomeProf = 'Carlos'
+        AND p.SobrenomeProf = 'Freitas'
+        AND p.TelefoneProf = '(11) 97543-6930'
     GROUP BY p.NomeProf, p.SobrenomeProf, p.TelefoneProf, d.Codigo, d.Nome;
 
 
@@ -99,10 +99,10 @@ SELECT
     o.MaxAlunos, 
     o.NomeUnidadeSala, 
     o.NumeroSala,
-    AVG(a.NotaDidatica) as MediaDidatica,
-    AVG(a.NotaMaterial) as MediaMaterial,
-    AVG(a.RelevanciaConteudo) as MediaRelevanciaConteudo,
-    AVG(a.InfraestruturaSala) as MediaInfraestruturaSala,
+    ROUND(AVG(a.NotaDidatica), 2) as MediaDidatica,
+    ROUND(AVG(a.NotaMaterial), 2) as MediaMaterial,
+    ROUND(AVG(a.RelevanciaConteudo), 2) as MediaRelevanciaConteudo,
+    ROUND(AVG(a.InfraestruturaSala), 2) as MediaInfraestruturaSala,
     Count(*) as NroAvaliacoes
     
     FROM Oferecimento o 
@@ -130,9 +130,9 @@ SELECT
     d.NomeProfChefe, 
     d.SobrenomeProfChefe, 
     d.TelefoneProfChefe, 
-    p.Email as EmailChefe, 
-    p.CEP as CEPchefe, 
-    p.Numero as NumeroCasaChefe, 
+    u.Email as EmailChefe, 
+    u.CEP as CEPchefe, 
+    u.Numero as NumeroCasaChefe, 
     p.Especializacao as EspecilizacaoChefe, 
     p.Titulacao as TitulacaoChefe,
     Count(c.CodigoUnico) as QtdCursos
@@ -142,7 +142,11 @@ SELECT
                 ON p.NomeProf = d.NomeProfChefe
                 AND p.SobrenomeProf = d.SobrenomeProfChefe
                 AND p.TelefoneProf = d.TelefoneProfChefe 
-        GROUP BY d.Codigo, d.Nome, d.NomeProfChefe, d.SobrenomeProfChefe, d.TelefoneProfChefe, p.Email, p.CEP, p.Numero, p.Especializacao, p.Titulacao;
+            LEFT JOIN Usuario u
+                ON u.Nome = p.NomeProf 
+                AND u.Sobrenome = p.SobrenomeProf 
+                AND u.Telefone = p.TelefoneProf
+        GROUP BY d.Codigo, d.Nome, d.NomeProfChefe, d.SobrenomeProfChefe, d.TelefoneProfChefe, u.Email, u.CEP, u.Numero, p.Especializacao, p.Titulacao;
 
 
 /*
@@ -170,14 +174,14 @@ SELECT
 /*
 Mostrar todas as mensagens enviadas por um usuário na última semana
 */
-SELECT m.Texto, m.Timestamp
+SELECT m.Texto, m.Time_stamp
     FROM MensagemEnviada me 
         JOIN Mensagem m ON m.idMensagem = me.idMensagem
     WHERE 
-        me.NomeRemetente = '?'
-        AND me.SobrenomeRemetente = '?'
-        AND me.TelefoneRemetente = '?'
-        AND m.Timestamp >= current_timestamp - INTERVAL '7 days';
+        me.NomeRemetente = 'Carlos'
+        AND me.SobrenomeRemetente = 'Freitas'
+        AND me.TelefoneRemetente = '(11) 97543-6930'
+        AND m.Time_stamp >= current_timestamp - INTERVAL '7 days';
 
 
 
