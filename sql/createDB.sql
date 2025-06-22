@@ -1,15 +1,3 @@
-DROP TYPE IF EXISTS t_nivel;
-
-CREATE TYPE t_nivel AS ENUM ('Fundamental', 'Medio', 'Tecnico', 'Graduacao');
-
-DROP TYPE IF EXISTS t_tipoUsuario;
-
-CREATE TYPE t_tipoUsuario AS ENUM ('Aluno', 'Professor', 'FuncionarioAdministrativo');
-
-DROP TYPE IF EXISTS t_tipoPeriodoLetivo;
-
-CREATE TYPE t_tipoPeriodoLetivo AS ENUM ('Semestral', 'Anual');
-
 DROP TABLE IF EXISTS Unidade CASCADE;
 
 CREATE TABLE
@@ -58,7 +46,7 @@ CREATE TABLE
         NomeAluno VARCHAR(50),
         SobrenomeAluno VARCHAR(200),
         TelefoneAluno VARCHAR(20),
-        NomeUnidade VARCHAR(50) FOREIGN KEY REFERENCES Unidade (NomeUnidade),
+        NomeUnidade VARCHAR(50) REFERENCES Unidade (NomeUnidade),
         CONSTRAINT PK_Aluno PRIMARY KEY (NomeAluno, SobrenomeAluno, TelefoneAluno),
         CONSTRAINT FK_Usuario FOREIGN KEY (NomeAluno, SobrenomeAluno, TelefoneAluno) REFERENCES Usuario (Nome, Sobrenome, Telefone)
     );
@@ -72,7 +60,7 @@ CREATE TABLE
         TelefoneProf VARCHAR(20),
         Especializacao VARCHAR(100),
         Titulacao VARCHAR(100),
-        NomeUnidade VARCHAR(50) FOREIGN KEY REFERENCES Unidade (NomeUnidade),
+        NomeUnidade VARCHAR(50) REFERENCES Unidade (NomeUnidade),
         CONSTRAINT PK_Professor PRIMARY KEY (NomeProf, SobrenomeProf, TelefoneProf),
         CONSTRAINT FK_UsuarioProfessor FOREIGN KEY (NomeProf, SobrenomeProf, TelefoneProf) REFERENCES Usuario (Nome, Sobrenome, Telefone)
     );
@@ -98,7 +86,7 @@ CREATE TABLE
         TelefoneProfChefe VARCHAR(20),
         CONSTRAINT FK_ProfChefe FOREIGN KEY (
             NomeProfChefe,
-            SobrenomProfChefe,
+            SobrenomeProfChefe,
             TelefoneProfChefe
         ) REFERENCES Professor (NomeProf, SobrenomeProf, TelefoneProf)
     );
@@ -113,10 +101,10 @@ CREATE TABLE
         CargaHoraria INTEGER NOT NULL,
         NumeroVagas INTEGER NOT NULL,
         Ementa VARCHAR(500),
-        CodigoDepartamento VARCHAR(50) FOREIGN KEY REFERENCES Departamento (Codigo),
+        CodigoDepartamento INTEGER REFERENCES Departamento (Codigo),
         NomeUnidadeSalaPadrao VARCHAR(50),
         NumeroSalaPadrao INTEGER,
-        NomeUnidadeCurso VARCHAR(50) FOREIGN KEY REFERENCES Unidade (NomeUnidade),
+        NomeUnidadeCurso VARCHAR(50) REFERENCES Unidade (NomeUnidade),
         CONSTRAINT FK_SalaPadrao FOREIGN KEY (NomeUnidadeSalaPadrao, NumeroSalaPadrao) REFERENCES SalaDeAula (NomeUnidade, NumeroSala)
     );
 
@@ -128,7 +116,7 @@ CREATE TABLE
         Codigo INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
         QtdAulasSemanais INTEGER NOT NULL,
         MaterialDidatico VARCHAR(300),
-        NomeUnidade VARCHAR(50) FOREIGN KEY REFERENCES Unidade (NomeUnidade)
+        NomeUnidade VARCHAR(50) REFERENCES Unidade (NomeUnidade)
     );
 
 
@@ -137,7 +125,7 @@ CREATE TABLE
 DROP TABLE IF EXISTS Oferecimento CASCADE;
 CREATE TABLE
     Oferecimento (
-        CodigoDisciplina INTEGER NOT NULL FOREIGN KEY REFERENCES Disciplina (Codigo),
+        CodigoDisciplina INTEGER NOT NULL REFERENCES Disciplina (Codigo),
         NomeProf VARCHAR(50) NOT NULL,
         SobrenomeProf VARCHAR(200) NOT NULL,
         TelefoneProf VARCHAR(20) NOT NULL,
@@ -177,7 +165,7 @@ CREATE TABLE
     Aviso (
         IdAviso INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
         Time_stamp TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
-        Texto TEXT NOT NULL
+        Texto TEXT NOT NULL,
         NomeUsuario VARCHAR(50) NOT NULL,
         SobrenomeUsuario VARCHAR(200) NOT NULL,
         TelefoneUsuario VARCHAR(20) NOT NULL,
@@ -195,7 +183,7 @@ CREATE TABLE
         NomeProf VARCHAR(50) NOT NULL,
         SobrenomeProf VARCHAR(200) NOT NULL,
         TelefoneProf VARCHAR(20) NOT NULL,
-        CodigoDisciplina INTEGER NOT NULL FOREIGN KEY REFERENCES Disciplina (Codigo),
+        CodigoDisciplina INTEGER NOT NULL REFERENCES Disciplina (Codigo),
         CONSTRAINT PK_ProfDiscResponsaveis PRIMARY KEY (
             NomeProf,
             SobrenomeProf,
@@ -250,7 +238,7 @@ CREATE TABLE
         ) REFERENCES Oferecimento (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo)
     );
 
-DROP TABLE IF EXISTS DataLimiteMatricula CASCADE;
+DROP TABLE IF EXISTS DataLimiteDeMatricula CASCADE;
 
 CREATE TABLE
     DataLimiteDeMatricula (
@@ -321,31 +309,31 @@ CREATE TABLE
 DROP TABLE IF EXISTS PreReqDisciplina CASCADE;
 CREATE TABLE
     PreReqDisciplina (
-        CodigoUnicoCurso INTEGER NOT NULL FOREIGN KEY REFERENCES Curso (CodigoUnico),
-        CodigoDisciplina INTEGER NOT NULL FOREIGN KEY REFERENCES Disciplina (Codigo),
+        CodigoUnicoCurso INTEGER NOT NULL REFERENCES Curso (CodigoUnico),
+        CodigoDisciplina INTEGER NOT NULL REFERENCES Disciplina (Codigo),
         CONSTRAINT PK_PreReqDisciplina PRIMARY KEY (CodigoUnicoCurso, CodigoDisciplina)
     );
 
 DROP TABLE IF EXISTS ComposicaoCurso CASCADE;
 CREATE TABLE
     ComposicaoCurso (
-        CodigoUnicoCurso INTEGER NOT NULL FOREIGN KEY REFERENCES Curso (CodigoUnico),
-        CodigoDisciplina INTEGER NOT NULL FOREIGN KEY REFERENCES Disciplina (Codigo),
+        CodigoUnicoCurso INTEGER NOT NULL REFERENCES Curso (CodigoUnico),
+        CodigoDisciplina INTEGER NOT NULL REFERENCES Disciplina (Codigo),
         CONSTRAINT PK_ComposicaoCurso PRIMARY KEY (CodigoUnicoCurso, CodigoDisciplina)
     );
 
 DROP TABLE IF EXISTS PreReqCurso CASCADE;
 CREATE TABLE
     PreReqCurso (
-        CodigoCurso INTEGER NOT NULL FOREIGN KEY REFERENCES Curso (CodigoUnico),
-        CodigoCursoPreReq INTEGER NOT NULL FOREIGN KEY REFERENCES Curso (CodigoUnico),
+        CodigoCurso INTEGER NOT NULL REFERENCES Curso (CodigoUnico),
+        CodigoCursoPreReq INTEGER NOT NULL REFERENCES Curso (CodigoUnico),
         CONSTRAINT PK_PreReqCurso PRIMARY KEY (CodigoCurso, CodigoCursoPreReq)
     );
 
 DROP TABLE IF EXISTS MensagemEnviada CASCADE;
 CREATE TABLE
     MensagemEnviada (
-        IdMensagem INTEGER NOT NULL FOREIGN KEY REFERENCES Mensagem (IdMensagem),
+        IdMensagem INTEGER NOT NULL REFERENCES Mensagem (IdMensagem),
         NomeDestinatario VARCHAR(50) NOT NULL,
         SobrenomeDestinatario VARCHAR(200) NOT NULL,
         TelefoneDestinatario VARCHAR(20) NOT NULL,
@@ -401,7 +389,7 @@ CREATE TABLE
             SobrenomeProf, 
             TelefoneProf, 
             InicioPeriodoLetivo
-        ),
+        )
     );
 
 DROP TABLE IF EXISTS Bolsas CASCADE;
