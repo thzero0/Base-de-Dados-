@@ -20,8 +20,8 @@ CREATE VIEW InformacoesDepartamento as
             FROM Departamento d 
                 LEFT JOIN Curso c ON c.CodigoDepartamento = d.Codigo
                 LEFT JOIN Professor p
-                    ON p.NomeProf = d.NomeProfChefe,
-                    AND p.SobrenomeProf = d.SobrenomeProfChefe,
+                    ON p.NomeProf = d.NomeProfChefe
+                    AND p.SobrenomeProf = d.SobrenomeProfChefe
                     AND p.TelefoneProf = d.TelefoneProfChefe 
             GROUP BY d.Codigo, d.Nome, d.NomeProfChefe, d.SobrenomeProfChefe, d.TelefoneProfChefe, p.Email, p.CEP, p.Numero, p.Especializacao, p.Titulacao;
 
@@ -76,7 +76,7 @@ CREATE VIEW MediasEscolares as
             AND m.SobrenomeProf = md.SobrenomeProf
             AND m.TelefoneProf = md.TelefoneProf
             AND m.InicioPeriodoLetivo = md.InicioPeriodoLetivo
-        GROUP BY a.Nome, a.Sobrenome, a.Telefone;
+        GROUP BY a.NomeAluno, a.SobrenomeAluno, a.TelefoneAluno;
 
 /*
 -- CONSULTA USANDO A VIEW DE CIMA

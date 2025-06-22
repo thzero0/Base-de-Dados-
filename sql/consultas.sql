@@ -55,7 +55,7 @@ SELECT
         AND m.SobrenomeProf = md.SobrenomeProf
         AND m.TelefoneProf = md.TelefoneProf
         AND m.InicioPeriodoLetivo = md.InicioPeriodoLetivo
-    GROUP BY a.Nome, a.Sobrenome, a.Telefone;
+    GROUP BY a.NomeAluno, a.SobrenomeAluno, a.TelefoneAluno;
 
 
 
@@ -65,6 +65,7 @@ Listar todas as disciplinas que um professor já lecionou
 SELECT
     p.NomeProf, 
     p.SobrenomeProf, 
+    p.TelefoneProf,
     d.Codigo, 
     d.Nome, 
     Count(*) as NroVezesMinistradas
@@ -80,7 +81,7 @@ SELECT
         p.NomeProf = '?'
         AND p.SobrenomeProf = '?'
         AND p.TelefoneProf = '?'
-    GROUP BY p.NomeProf, p.SobrenomeProf, d.Codigo, d.Nome;
+    GROUP BY p.NomeProf, p.SobrenomeProf, p.TelefoneProf, d.Codigo, d.Nome;
 
 
 -- VIEW
@@ -138,8 +139,8 @@ SELECT
         FROM Departamento d 
             LEFT JOIN Curso c ON c.CodigoDepartamento = d.Codigo
             LEFT JOIN Professor p
-                ON p.NomeProf = d.NomeProfChefe,
-                AND p.SobrenomeProf = d.SobrenomeProfChefe,
+                ON p.NomeProf = d.NomeProfChefe
+                AND p.SobrenomeProf = d.SobrenomeProfChefe
                 AND p.TelefoneProf = d.TelefoneProfChefe 
         GROUP BY d.Codigo, d.Nome, d.NomeProfChefe, d.SobrenomeProfChefe, d.TelefoneProfChefe, p.Email, p.CEP, p.Numero, p.Especializacao, p.Titulacao;
 
@@ -151,7 +152,7 @@ SELECT
     c.CodigoUnico, 
     c.Nome, 
     Count(*) as QtdMatriculas,
-    (SUM(CASE WHEN m.StatusMatricula = 'cancelada' THEN 1 else 0)/Count(*)) as PorcentagemMatriculasCanceladas
+    (SUM(CASE WHEN m.StatusMatricula = 'cancelada' THEN 1 else 0 END)::float /Count(*)) as PorcentagemMatriculasCanceladas
     
     FROM Curso c 
         LEFT JOIN ComposicaoCurso cc ON cc.CodigoUnicoCurso = c.CodigoUnico 
@@ -174,9 +175,9 @@ SELECT m.Texto, m.Timestamp
         JOIN Mensagem m ON m.idMensagem = me.idMensagem
     WHERE 
         me.NomeRemetente = '?'
-        me.SobrenomeRemetente = '?'
-        me.TelefoneRemetente = '?'
-        m.Timestamp >= current_timestamp - INTERVAL '7 days';
+        AND me.SobrenomeRemetente = '?'
+        AND me.TelefoneRemetente = '?'
+        AND m.Timestamp >= current_timestamp - INTERVAL '7 days';
 
 
 
