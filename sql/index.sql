@@ -1,9 +1,16 @@
 /*
+SET enable_seqscan = off;
+SET enable_bitmapscan = off;
+*/
+
+
+
+/*
 1 - INDEX para otimizar buscas em oferecimentos a partir
 de quando ele foi lecionado:
-    - (InicioPeriodoLetivo, TipoPeriodoLetivo)
+    - (InicioPeriodoLetivo)
 */
-CREATE INDEX OferPorPeriodoLetivo ON Oferecimento USING BRIN (InicioPeriodoLetivo, TipoPeriodoLetivo);
+CREATE INDEX OferPorPeriodoLetivo ON Oferecimento USING BRIN (InicioPeriodoLetivo);
 -- DROP INDEX IF EXISTS OferPorPeriodoLetivo;
 
 -- Consulta para validar o INDEX 1
@@ -12,7 +19,6 @@ SELECT *
     FROM Oferecimento o
     WHERE 
         o.InicioPeriodoLetivo BETWEEN '2024-01-01' AND '2025-01-01'
-        AND o.TipoPeriodoLetivo = 'Semestral';
 
 
 
