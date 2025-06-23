@@ -498,3 +498,73 @@ INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario
 INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente) VALUES (18, 'Lucas', 'Oliveira', '(11) 94257-9928', 'Juliana', 'Gomes', '(11) 96977-3664');
 INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente) VALUES (19, 'Fernanda', 'Nogueira', '(11) 98177-9479', 'Felipe', 'Araújo', '(11) 96925-4150');
 INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente) VALUES (20, 'Bruno', 'Castro', '(11) 91964-4750', 'Felipe', 'Araújo', '(11) 96925-4150');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade)
+VALUES ('Prática Profissional em Arquitetura', 3, 'Manual de Projeto Arquitetônico', 'Faculdade de Arquitetura');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade)
+VALUES ('Comunicação Digital Avançada', 4, 'Redes Sociais e Mídias Digitais', 'Escola de Comunicação');
+INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade)
+VALUES ('Laboratório de Física Moderna', 5, 'Física Quântica Essencial', 'Instituto de Física');
+INSERT INTO SalaDeAula (NomeUnidade, NumeroSala, QtdLimite)
+VALUES ('Faculdade de Arquitetura', 6, 40);
+INSERT INTO SalaDeAula (NomeUnidade, NumeroSala, QtdLimite)
+VALUES ('Escola de Comunicação', 7, 35);
+INSERT INTO SalaDeAula (NomeUnidade, NumeroSala, QtdLimite)
+VALUES ('Instituto de Física', 8, 50);
+INSERT INTO Oferecimento (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, TipoPeriodoLetivo, MaxAlunos, NomeUnidadeSala, NumeroSala)
+VALUES (
+  (SELECT Codigo FROM Disciplina WHERE Nome = 'Prática Profissional em Arquitetura'),
+  'Carlos','Freitas','(11) 97543-6930','2025-03-01','Semestral',30,'Faculdade de Arquitetura',6
+);
+INSERT INTO Oferecimento (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, TipoPeriodoLetivo, MaxAlunos, NomeUnidadeSala, NumeroSala)
+VALUES (
+  (SELECT Codigo FROM Disciplina WHERE Nome = 'Comunicação Digital Avançada'),
+  'Carlos','Freitas','(11) 97543-6930','2025-03-02','Anual',25,'Escola de Comunicação',7
+);
+INSERT INTO Oferecimento (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, TipoPeriodoLetivo, MaxAlunos, NomeUnidadeSala, NumeroSala)
+VALUES (
+  (SELECT Codigo FROM Disciplina WHERE Nome = 'Laboratório de Física Moderna'),
+  'Carlos','Freitas','(11) 97543-6930','2025-03-03','Semestral',20,'Instituto de Física',12
+);
+INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento)
+VALUES ('Maria', 'Souza', '(11) 93286-2679', 1, 'André', 'Barbosa', '(11) 98517-3340', '2025-01-01', '2025-02-12', 'cancelada', 2600.50, 'pendente');
+INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento)
+VALUES ('Pedro', 'Costa', '(11) 97912-1520', 2, 'Renata', 'Pinto', '(11) 99830-5304', '2025-01-31', '2025-02-15', 'ativa', 3000.00, 'paga');
+INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento)
+VALUES ('Ana', 'Santos', '(11) 94811-9279', 3, 'Carlos', 'Freitas', '(11) 97543-6930', '2025-01-01', '2025-02-05', 'cancelada', 2800.75, 'pendente');
+INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento)
+VALUES ('Lucas', 'Oliveira', '(11) 94257-9928', 3, 'Carlos', 'Freitas', '(11) 97543-6930', '2025-01-01', '2025-02-06', 'ativa', 2800.35, 'paga');
+INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento)
+VALUES ('Beatriz', 'Pereira', '(11) 95557-1106', 4, 'Tatiana', 'Cardoso', '(11) 99085-2489', '2025-01-31', '2025-02-10', 'cancelada', 2250.00, 'pendente');
+INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento)
+VALUES ('Rafael', 'Rodrigues', '(11) 95552-3547', 5, 'Ricardo', 'Lopes', '(11) 93621-7916', '2025-01-01', '2025-02-20', 'ativa', 3100.30, 'paga');
+INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento)
+VALUES ('Camila', 'Almeida', '(11) 92519-7224', 6, 'Larissa', 'Vieira', '(11) 97252-8668', '2025-01-31', '2025-02-17', 'cancelada', 2400.00, 'pendente');
+INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento)
+VALUES ('Gabriel', 'Nascimento', '(11) 96635-5333', 7, 'Fernando', 'Araujo', '(11) 91188-2876', '2025-01-01', '2025-02-08', 'ativa', 2950.50, 'paga');
+INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento)
+VALUES ('Fernanda', 'Lima', '(11) 93045-7201', 8, 'Paula', 'Dias', '(11) 95371-6573', '2025-01-31', '2025-02-13', 'cancelada', 2700.00, 'pendente');
+INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento)
+VALUES ('Felipe', 'Araújo', '(11) 96925-4150', 9, 'Leandro', 'Cavalcante', '(11) 93591-8433', '2025-01-01', '2025-02-09', 'ativa', 2600.20, 'paga');
+INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento)
+VALUES ('Larissa', 'Fernandes', '(11) 94733-5741', 10, 'Sofia', 'Melo', '(11) 99201-3927', '2025-01-31', '2025-02-14', 'cancelada', 2550.00, 'pendente');
+INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento)
+VALUES ('Bruno', 'Carvalho', '(11) 92654-7227', 11, 'Marcelo', 'Freitas', '(11) 95889-9317', '2025-01-01', '2025-02-11', 'ativa', 2450.75, 'paga');
+INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento)
+VALUES ('Juliana', 'Gomes', '(11) 96977-3664', 12, 'Gabriela', 'Peixoto', '(11) 97126-3646', '2025-01-31', '2025-02-16', 'cancelada', 2300.00, 'pendente');
+INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento)
+VALUES ('Gustavo', 'Martins', '(11) 95374-2169', 13, 'Daniel', 'Moraes', '(11) 91009-6310', '2025-01-01', '2025-02-07', 'ativa', 2650.00, 'paga');
+INSERT INTO Mensagem (Texto) VALUES ('Nova turma de Física se inicia na próxima semana.');
+INSERT INTO Mensagem (Texto) VALUES ('Rematrícula abre dia 01/07 no portal acadêmico.');
+INSERT INTO Mensagem (Texto) VALUES ('Seminário de Química ocorre em 25/06, sala 8.');
+INSERT INTO Mensagem (Texto) VALUES ('Aulas de Cálculo terão revisão extra na segunda-feira.');
+INSERT INTO Mensagem (Texto) VALUES ('Entrega de projeto final de Arquitetura até 30/06.');
+INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente)
+VALUES (21, 'João', 'Silva', '(11) 92824-1409', 'Carlos', 'Freitas', '(11) 97543-6930');
+INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente)
+VALUES (22, 'Maria', 'Souza', '(11) 93286-2679', 'Carlos', 'Freitas', '(11) 97543-6930');
+INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente)
+VALUES (23, 'Pedro', 'Costa', '(11) 97912-1520', 'Carlos', 'Freitas', '(11) 97543-6930');
+INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente)
+VALUES (24, 'Ana', 'Santos', '(11) 94811-9279', 'Carlos', 'Freitas', '(11) 97543-6930');
+INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente)
+VALUES (25, 'Lucas', 'Oliveira', '(11) 94257-9928', 'Carlos', 'Freitas', '(11) 97543-6930');
