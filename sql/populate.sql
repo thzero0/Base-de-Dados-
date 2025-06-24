@@ -1,3 +1,4 @@
+-- Popula a tabela Unidade com 20 entradas
 INSERT INTO Unidade (NomeUnidade, Cidade, Estado, Pais, Predio, Bloco) VALUES ('Faculdade de Engenharia', 'São Paulo', 'SP', 'Brasil', 'Prédio Central', 'Bloco A');
 INSERT INTO Unidade (NomeUnidade, Cidade, Estado, Pais, Predio, Bloco) VALUES ('Faculdade de Medicina', 'Rio de Janeiro', 'RJ', 'Brasil', 'Hospital Universitário', 'Bloco B');
 INSERT INTO Unidade (NomeUnidade, Cidade, Estado, Pais, Predio, Bloco) VALUES ('Instituto de Computação', 'Belo Horizonte', 'MG', 'Brasil', 'Torre de Informática', 'Bloco C');
@@ -18,6 +19,8 @@ INSERT INTO Unidade (NomeUnidade, Cidade, Estado, Pais, Predio, Bloco) VALUES ('
 INSERT INTO Unidade (NomeUnidade, Cidade, Estado, Pais, Predio, Bloco) VALUES ('Escola de Artes', 'Maceió', 'AL', 'Brasil', 'Ateliê', 'Bloco R');
 INSERT INTO Unidade (NomeUnidade, Cidade, Estado, Pais, Predio, Bloco) VALUES ('Instituto de Matemática', 'João Pessoa', 'PB', 'Brasil', 'Bloco Math', 'Bloco S');
 INSERT INTO Unidade (NomeUnidade, Cidade, Estado, Pais, Predio, Bloco) VALUES ('Faculdade de Turismo', 'Porto Velho', 'RO', 'Brasil', 'Centro de Turismo', 'Bloco T');
+
+-- Popula a tabela Usuario com 60 entradas
 INSERT INTO Usuario (Nome, Sobrenome, Telefone, Sexo, Email, DataNasc, CEP, Numero, TipoUsuario, Senha) VALUES ('João', 'Silva', '(11) 92824-1409', 'M', 'joão.silva@universidade.com.br', '2000-04-29', '42098-000', '115', 'Aluno', 'senha01');
 INSERT INTO Usuario (Nome, Sobrenome, Telefone, Sexo, Email, DataNasc, CEP, Numero, TipoUsuario, Senha) VALUES ('Maria', 'Souza', '(11) 93286-2679', 'F', 'maria.souza@universidade.com.br', '2018-05-06', '81482-000', '45', 'Aluno', 'senha02');
 INSERT INTO Usuario (Nome, Sobrenome, Telefone, Sexo, Email, DataNasc, CEP, Numero, TipoUsuario, Senha) VALUES ('Pedro', 'Costa', '(11) 97912-1520', 'M', 'pedro.costa@universidade.com.br', '1989-04-29', '22280-000', '112', 'Aluno', 'senha03');
@@ -78,6 +81,8 @@ INSERT INTO Usuario (Nome, Sobrenome, Telefone, Sexo, Email, DataNasc, CEP, Nume
 INSERT INTO Usuario (Nome, Sobrenome, Telefone, Sexo, Email, DataNasc, CEP, Numero, TipoUsuario, Senha) VALUES ('Bianca', 'Brandão', '(11) 98973-3536', 'F', 'bianca.brandão@universidade.com.br', '1996-07-04', '48890-000', '112', 'FuncionarioAdministrativo', 'senha58');
 INSERT INTO Usuario (Nome, Sobrenome, Telefone, Sexo, Email, DataNasc, CEP, Numero, TipoUsuario, Senha) VALUES ('Sérgio', 'Rezende', '(11) 91958-9883', 'M', 'sérgio.rezende@universidade.com.br', '1990-09-21', '51104-000', '30', 'FuncionarioAdministrativo', 'senha59');
 INSERT INTO Usuario (Nome, Sobrenome, Telefone, Sexo, Email, DataNasc, CEP, Numero, TipoUsuario, Senha) VALUES ('Daniela', 'Serra', '(11) 91821-8811', 'F', 'daniela.serra@universidade.com.br', '2010-07-18', '79615-000', '81', 'FuncionarioAdministrativo', 'senha60');
+
+-- Popula a tabela SalaDeAula com 20 entradas
 INSERT INTO SalaDeAula (NomeUnidade, NumeroSala, QtdLimite) VALUES ('Faculdade de Engenharia', 1, 44);
 INSERT INTO SalaDeAula (NomeUnidade, NumeroSala, QtdLimite) VALUES ('Faculdade de Medicina', 2, 33);
 INSERT INTO SalaDeAula (NomeUnidade, NumeroSala, QtdLimite) VALUES ('Instituto de Computação', 3, 65);
@@ -98,6 +103,8 @@ INSERT INTO SalaDeAula (NomeUnidade, NumeroSala, QtdLimite) VALUES ('Faculdade d
 INSERT INTO SalaDeAula (NomeUnidade, NumeroSala, QtdLimite) VALUES ('Escola de Artes', 18, 55);
 INSERT INTO SalaDeAula (NomeUnidade, NumeroSala, QtdLimite) VALUES ('Instituto de Matemática', 19, 99);
 INSERT INTO SalaDeAula (NomeUnidade, NumeroSala, QtdLimite) VALUES ('Faculdade de Turismo', 20, 83);
+
+-- Popula a tabela Aluno com 20 entradas
 INSERT INTO Aluno (NomeAluno, SobrenomeAluno, TelefoneAluno, NomeUnidade) VALUES ('João', 'Silva', '(11) 92824-1409', 'Instituto de Química');
 INSERT INTO Aluno (NomeAluno, SobrenomeAluno, TelefoneAluno, NomeUnidade) VALUES ('Maria', 'Souza', '(11) 93286-2679', 'Faculdade de Farmácia');
 INSERT INTO Aluno (NomeAluno, SobrenomeAluno, TelefoneAluno, NomeUnidade) VALUES ('Pedro', 'Costa', '(11) 97912-1520', 'Instituto de Matemática');
@@ -118,6 +125,8 @@ INSERT INTO Aluno (NomeAluno, SobrenomeAluno, TelefoneAluno, NomeUnidade) VALUES
 INSERT INTO Aluno (NomeAluno, SobrenomeAluno, TelefoneAluno, NomeUnidade) VALUES ('Aline', 'Alves', '(11) 91916-4752', 'Instituto de Física');
 INSERT INTO Aluno (NomeAluno, SobrenomeAluno, TelefoneAluno, NomeUnidade) VALUES ('Diego', 'Monteiro', '(11) 95386-2084', 'Faculdade de Turismo');
 INSERT INTO Aluno (NomeAluno, SobrenomeAluno, TelefoneAluno, NomeUnidade) VALUES ('Mariana', 'Mendes', '(11) 96155-4483', 'Faculdade de Letras');
+
+-- Popula a tabela Professor com 20 entradas
 INSERT INTO Professor (NomeProf, SobrenomeProf, TelefoneProf, Especializacao, Titulacao, NomeUnidade) VALUES ('André', 'Barbosa', '(11) 98517-3340', 'Especialização em Engenharia', 'Doutor(a)', 'Faculdade de Farmácia');
 INSERT INTO Professor (NomeProf, SobrenomeProf, TelefoneProf, Especializacao, Titulacao, NomeUnidade) VALUES ('Renata', 'Pinto', '(11) 99830-5304', 'Especialização em Engenharia', 'Doutor(a)', 'Faculdade de Enfermagem');
 INSERT INTO Professor (NomeProf, SobrenomeProf, TelefoneProf, Especializacao, Titulacao, NomeUnidade) VALUES ('Carlos', 'Freitas', '(11) 97543-6930', 'Especialização em Engenharia', 'Doutor(a)', 'Escola de Artes');
@@ -138,6 +147,8 @@ INSERT INTO Professor (NomeProf, SobrenomeProf, TelefoneProf, Especializacao, Ti
 INSERT INTO Professor (NomeProf, SobrenomeProf, TelefoneProf, Especializacao, Titulacao, NomeUnidade) VALUES ('Simone', 'Ferreira', '(11) 94470-9835', 'Especialização em Medicina', 'Doutor(a)', 'Escola de Artes');
 INSERT INTO Professor (NomeProf, SobrenomeProf, TelefoneProf, Especializacao, Titulacao, NomeUnidade) VALUES ('Thiago', 'Moreira', '(11) 96107-7537', 'Especialização em Direito', 'Doutor(a)', 'Faculdade de Psicologia');
 INSERT INTO Professor (NomeProf, SobrenomeProf, TelefoneProf, Especializacao, Titulacao, NomeUnidade) VALUES ('Fernanda', 'Nogueira', '(11) 98177-9479', 'Especialização em Engenharia', 'Doutor(a)', 'Instituto de Química');
+
+-- Popula a tabela FuncionarioAdministrativo com 20 entradas
 INSERT INTO FuncionarioAdministrativo (NomeAdm, SobrenomeAdm, TelefoneAdm) VALUES ('Vinícius', 'Xavier', '(11) 94681-2049');
 INSERT INTO FuncionarioAdministrativo (NomeAdm, SobrenomeAdm, TelefoneAdm) VALUES ('Lorena', 'Ramos', '(11) 94770-4608');
 INSERT INTO FuncionarioAdministrativo (NomeAdm, SobrenomeAdm, TelefoneAdm) VALUES ('Bruno', 'Castro', '(11) 91964-4750');
@@ -158,6 +169,8 @@ INSERT INTO FuncionarioAdministrativo (NomeAdm, SobrenomeAdm, TelefoneAdm) VALUE
 INSERT INTO FuncionarioAdministrativo (NomeAdm, SobrenomeAdm, TelefoneAdm) VALUES ('Bianca', 'Brandão', '(11) 98973-3536');
 INSERT INTO FuncionarioAdministrativo (NomeAdm, SobrenomeAdm, TelefoneAdm) VALUES ('Sérgio', 'Rezende', '(11) 91958-9883');
 INSERT INTO FuncionarioAdministrativo (NomeAdm, SobrenomeAdm, TelefoneAdm) VALUES ('Daniela', 'Serra', '(11) 91821-8811');
+
+-- Popula a tabela Departamento com 20 entradas
 INSERT INTO Departamento (Nome, NomeProfChefe, SobrenomeProfChefe, TelefoneProfChefe) VALUES ('Departamento de Engenharia', 'André', 'Barbosa', '(11) 98517-3340');
 INSERT INTO Departamento (Nome, NomeProfChefe, SobrenomeProfChefe, TelefoneProfChefe) VALUES ('Departamento de Medicina', 'Renata', 'Pinto', '(11) 99830-5304');
 INSERT INTO Departamento (Nome, NomeProfChefe, SobrenomeProfChefe, TelefoneProfChefe) VALUES ('Departamento de Computação', 'Carlos', 'Freitas', '(11) 97543-6930');
@@ -178,6 +191,8 @@ INSERT INTO Departamento (Nome, NomeProfChefe, SobrenomeProfChefe, TelefoneProfC
 INSERT INTO Departamento (Nome, NomeProfChefe, SobrenomeProfChefe, TelefoneProfChefe) VALUES ('Departamento de Artes', 'Simone', 'Ferreira', '(11) 94470-9835');
 INSERT INTO Departamento (Nome, NomeProfChefe, SobrenomeProfChefe, TelefoneProfChefe) VALUES ('Departamento de Matemática', 'Thiago', 'Moreira', '(11) 96107-7537');
 INSERT INTO Departamento (Nome, NomeProfChefe, SobrenomeProfChefe, TelefoneProfChefe) VALUES ('Departamento de Turismo', 'Fernanda', 'Nogueira', '(11) 98177-9479');
+
+-- Popula a tabela Curso com 20 entradas
 INSERT INTO Curso (Nome, Nivel, CargaHoraria, NumeroVagas, Ementa, CodigoDepartamento, NomeUnidadeSalaPadrao, NumeroSalaPadrao, NomeUnidadeCurso) VALUES ('Curso de Engenharia', 'Fundamental', 120, 122, 'Ementa do curso de engenharia', 1, 'Faculdade de Engenharia', 1, 'Faculdade de Letras');
 INSERT INTO Curso (Nome, Nivel, CargaHoraria, NumeroVagas, Ementa, CodigoDepartamento, NomeUnidadeSalaPadrao, NumeroSalaPadrao, NomeUnidadeCurso) VALUES ('Curso de Medicina', 'Fundamental', 94, 165, 'Ementa do curso de medicina', 2, 'Faculdade de Medicina', 2, 'Faculdade de Psicologia');
 INSERT INTO Curso (Nome, Nivel, CargaHoraria, NumeroVagas, Ementa, CodigoDepartamento, NomeUnidadeSalaPadrao, NumeroSalaPadrao, NomeUnidadeCurso) VALUES ('Curso de Computação', 'Medio', 167, 121, 'Ementa do curso de computação', 3, 'Instituto de Computação', 3, 'Faculdade de Farmácia');
@@ -198,6 +213,8 @@ INSERT INTO Curso (Nome, Nivel, CargaHoraria, NumeroVagas, Ementa, CodigoDeparta
 INSERT INTO Curso (Nome, Nivel, CargaHoraria, NumeroVagas, Ementa, CodigoDepartamento, NomeUnidadeSalaPadrao, NumeroSalaPadrao, NomeUnidadeCurso) VALUES ('Curso de Artes', 'Fundamental', 132, 98, 'Ementa do curso de artes', 18, 'Escola de Artes', 18, 'Instituto de Química');
 INSERT INTO Curso (Nome, Nivel, CargaHoraria, NumeroVagas, Ementa, CodigoDepartamento, NomeUnidadeSalaPadrao, NumeroSalaPadrao, NomeUnidadeCurso) VALUES ('Curso de Matemática', 'Fundamental', 101, 165, 'Ementa do curso de matemática', 19, 'Instituto de Matemática', 19, 'Instituto de Computação');
 INSERT INTO Curso (Nome, Nivel, CargaHoraria, NumeroVagas, Ementa, CodigoDepartamento, NomeUnidadeSalaPadrao, NumeroSalaPadrao, NomeUnidadeCurso) VALUES ('Curso de Turismo', 'Fundamental', 164, 37, 'Ementa do curso de turismo', 20, 'Faculdade de Turismo', 20, 'Escola de Artes');
+
+-- Popula a tabela Disciplina com 20 entradas
 INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Arquitetura Contemporânea', 2, 'Projeto Arquitetônico Contemporâneo', 'Faculdade de Arquitetura');
 INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Biologia Molecular', 6, 'Biologia Molecular da Célula', 'Instituto de Biologia');
 INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Teoria da Comunicação', 5, 'Teoria da Comunicação', 'Escola de Comunicação');
@@ -218,6 +235,8 @@ INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) V
 INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Semiologia Médica', 6, 'Semiologia Médica', 'Faculdade de Medicina');
 INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Estruturas de Dados', 2, 'Estruturas de Dados com Java', 'Instituto de Computação');
 INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade) VALUES ('Psicologia Social', 1, 'Psicologia Social', 'Faculdade de Psicologia');
+
+-- Popula a tabela Oferecimento com 20 entradas
 INSERT INTO Oferecimento (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, TipoPeriodoLetivo, MaxAlunos, NomeUnidadeSala, NumeroSala) VALUES (1, 'André', 'Barbosa', '(11) 98517-3340', '2025-01-01', 'Semestral', 19, 'Faculdade de Engenharia', 1);
 INSERT INTO Oferecimento (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, TipoPeriodoLetivo, MaxAlunos, NomeUnidadeSala, NumeroSala) VALUES (2, 'Renata', 'Pinto', '(11) 99830-5304', '2025-01-31', 'Anual', 75, 'Faculdade de Medicina', 2);
 INSERT INTO Oferecimento (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, TipoPeriodoLetivo, MaxAlunos, NomeUnidadeSala, NumeroSala) VALUES (3, 'Carlos', 'Freitas', '(11) 97543-6930', '2025-01-01', 'Semestral', 40, 'Instituto de Computação', 3);
@@ -238,6 +257,8 @@ INSERT INTO Oferecimento (CodigoDisciplina, NomeProf, SobrenomeProf, TelefonePro
 INSERT INTO Oferecimento (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, TipoPeriodoLetivo, MaxAlunos, NomeUnidadeSala, NumeroSala) VALUES (18, 'Simone', 'Ferreira', '(11) 94470-9835', '2025-01-31', 'Anual', 22, 'Escola de Artes', 18);
 INSERT INTO Oferecimento (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, TipoPeriodoLetivo, MaxAlunos, NomeUnidadeSala, NumeroSala) VALUES (19, 'Thiago', 'Moreira', '(11) 96107-7537', '2025-01-01', 'Semestral', 94, 'Instituto de Matemática', 19);
 INSERT INTO Oferecimento (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, TipoPeriodoLetivo, MaxAlunos, NomeUnidadeSala, NumeroSala) VALUES (20, 'Fernanda', 'Nogueira', '(11) 98177-9479', '2025-01-31', 'Anual', 65, 'Faculdade de Turismo', 20);
+
+-- Popula a tabela ProfDiscResponsaveis com 20 entradas
 INSERT INTO ProfDiscResponsaveis (NomeProf, SobrenomeProf, TelefoneProf, CodigoDisciplina) VALUES ('André', 'Barbosa', '(11) 98517-3340', 1);
 INSERT INTO ProfDiscResponsaveis (NomeProf, SobrenomeProf, TelefoneProf, CodigoDisciplina) VALUES ('Renata', 'Pinto', '(11) 99830-5304', 2);
 INSERT INTO ProfDiscResponsaveis (NomeProf, SobrenomeProf, TelefoneProf, CodigoDisciplina) VALUES ('Carlos', 'Freitas', '(11) 97543-6930', 3);
@@ -258,6 +279,8 @@ INSERT INTO ProfDiscResponsaveis (NomeProf, SobrenomeProf, TelefoneProf, CodigoD
 INSERT INTO ProfDiscResponsaveis (NomeProf, SobrenomeProf, TelefoneProf, CodigoDisciplina) VALUES ('Simone', 'Ferreira', '(11) 94470-9835', 18);
 INSERT INTO ProfDiscResponsaveis (NomeProf, SobrenomeProf, TelefoneProf, CodigoDisciplina) VALUES ('Thiago', 'Moreira', '(11) 96107-7537', 19);
 INSERT INTO ProfDiscResponsaveis (NomeProf, SobrenomeProf, TelefoneProf, CodigoDisciplina) VALUES ('Fernanda', 'Nogueira', '(11) 98177-9479', 20);
+
+-- Popula a tabela Matricula com 20 entradas
 INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento) VALUES ('João', 'Silva', '(11) 92824-1409', 1, 'André', 'Barbosa', '(11) 98517-3340', '2025-01-01', '2025-01-31', 'cancelada', 2694.31, 'pendente');
 INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento) VALUES ('Maria', 'Souza', '(11) 93286-2679', 2, 'Renata', 'Pinto', '(11) 99830-5304', '2025-01-31', '2025-03-02', 'ativa', 3693.46, 'paga');
 INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento) VALUES ('Pedro', 'Costa', '(11) 97912-1520', 3, 'Carlos', 'Freitas', '(11) 97543-6930', '2025-01-01', '2025-01-31', 'ativa', 2610.49, 'pendente');
@@ -278,6 +301,8 @@ INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplin
 INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento) VALUES ('Aline', 'Alves', '(11) 91916-4752', 18, 'Simone', 'Ferreira', '(11) 94470-9835', '2025-01-31', '2025-03-02', 'ativa', 1227.52, 'paga');
 INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento) VALUES ('Diego', 'Monteiro', '(11) 95386-2084', 19, 'Thiago', 'Moreira', '(11) 96107-7537', '2025-01-01', '2025-01-31', 'ativa', 1274.09, 'paga');
 INSERT INTO Matricula (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataMatricula, StatusMatricula, Taxas, StatusPagamento) VALUES ('Mariana', 'Mendes', '(11) 96155-4483', 20, 'Fernanda', 'Nogueira', '(11) 98177-9479', '2025-01-31', '2025-03-02', 'ativa', 2615.1, 'paga');
+
+-- Popula a tabela DataLimiteDeMatricula com 20 entradas
 INSERT INTO DataLimiteDeMatricula (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataLimite) VALUES (1, 'André', 'Barbosa', '(11) 98517-3340', '2025-01-01', '2025-03-02');
 INSERT INTO DataLimiteDeMatricula (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataLimite) VALUES (2, 'Renata', 'Pinto', '(11) 99830-5304', '2025-01-31', '2025-04-01');
 INSERT INTO DataLimiteDeMatricula (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataLimite) VALUES (3, 'Carlos', 'Freitas', '(11) 97543-6930', '2025-01-01', '2025-03-02');
@@ -298,6 +323,8 @@ INSERT INTO DataLimiteDeMatricula (CodigoDisciplina, NomeProf, SobrenomeProf, Te
 INSERT INTO DataLimiteDeMatricula (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataLimite) VALUES (18, 'Simone', 'Ferreira', '(11) 94470-9835', '2025-01-31', '2025-04-01');
 INSERT INTO DataLimiteDeMatricula (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataLimite) VALUES (19, 'Thiago', 'Moreira', '(11) 96107-7537', '2025-01-01', '2025-03-02');
 INSERT INTO DataLimiteDeMatricula (CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, DataLimite) VALUES (20, 'Fernanda', 'Nogueira', '(11) 98177-9479', '2025-01-31', '2025-04-01');
+
+-- Popula a tabela Avaliacao com 20 entradas
 INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
 VALUES ('João', 'Silva', '(11) 92824-1409', 1, 'André', 'Barbosa', '(11) 98517-3340', '2025-01-01', 'Gostei muito desta disciplina! Conteúdo bem organizado e claro.', 5, 5, 1, 5);
 INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
@@ -338,6 +365,8 @@ INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplin
 VALUES ('Diego', 'Monteiro', '(11) 95386-2084', 19, 'Thiago', 'Moreira', '(11) 96107-7537', '2025-01-01', 'Feedback construtivo nas avaliações ajudou a melhorar.', 2, 4, 5, 4);
 INSERT INTO Avaliacao (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Comentario, NotaDidatica, NotaMaterial, RelevanciaConteudo, InfraestruturaSala)
 VALUES ('Mariana', 'Mendes', '(11) 96155-4483', 20, 'Fernanda', 'Nogueira', '(11) 98177-9479', '2025-01-31', 'Conteúdo prático e teórico bem balanceado.', 5, 1, 1, 1);
+
+-- Popula a tabela Notas com 20 entradas
 INSERT INTO Notas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Nota) VALUES ('João', 'Silva', '(11) 92824-1409', 1, 'André', 'Barbosa', '(11) 98517-3340', '2025-01-01', 9.45);
 INSERT INTO Notas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Nota) VALUES ('Maria', 'Souza', '(11) 93286-2679', 2, 'Renata', 'Pinto', '(11) 99830-5304', '2025-01-31', 6.91);
 INSERT INTO Notas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Nota) VALUES ('Pedro', 'Costa', '(11) 97912-1520', 3, 'Carlos', 'Freitas', '(11) 97543-6930', '2025-01-01', 1.49);
@@ -358,6 +387,8 @@ INSERT INTO Notas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, N
 INSERT INTO Notas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Nota) VALUES ('Aline', 'Alves', '(11) 91916-4752', 18, 'Simone', 'Ferreira', '(11) 94470-9835', '2025-01-31', 8.75);
 INSERT INTO Notas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Nota) VALUES ('Diego', 'Monteiro', '(11) 95386-2084', 19, 'Thiago', 'Moreira', '(11) 96107-7537', '2025-01-01', 9.74);
 INSERT INTO Notas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Nota) VALUES ('Mariana', 'Mendes', '(11) 96155-4483', 20, 'Fernanda', 'Nogueira', '(11) 98177-9479', '2025-01-31', 7.49);
+
+-- Popula a tabela Bolsas com 20 entradas
 INSERT INTO Bolsas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Bolsa) VALUES ('João', 'Silva', '(11) 92824-1409', 1, 'André', 'Barbosa', '(11) 98517-3340', '2025-01-01', 0.93);
 INSERT INTO Bolsas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Bolsa) VALUES ('Maria', 'Souza', '(11) 93286-2679', 2, 'Renata', 'Pinto', '(11) 99830-5304', '2025-01-31', 0.24);
 INSERT INTO Bolsas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Bolsa) VALUES ('Pedro', 'Costa', '(11) 97912-1520', 3, 'Carlos', 'Freitas', '(11) 97543-6930', '2025-01-01', 0.16);
@@ -378,6 +409,8 @@ INSERT INTO Bolsas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, 
 INSERT INTO Bolsas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Bolsa) VALUES ('Aline', 'Alves', '(11) 91916-4752', 18, 'Simone', 'Ferreira', '(11) 94470-9835', '2025-01-31', 0.47);
 INSERT INTO Bolsas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Bolsa) VALUES ('Diego', 'Monteiro', '(11) 95386-2084', 19, 'Thiago', 'Moreira', '(11) 96107-7537', '2025-01-01', 0.2);
 INSERT INTO Bolsas (NomeAluno, SobrenomeAluno, TelefoneAluno, CodigoDisciplina, NomeProf, SobrenomeProf, TelefoneProf, InicioPeriodoLetivo, Bolsa) VALUES ('Mariana', 'Mendes', '(11) 96155-4483', 20, 'Fernanda', 'Nogueira', '(11) 98177-9479', '2025-01-31', 0.92);
+
+-- Popula a tabela PreReqDisciplina com 20 entradas
 INSERT INTO PreReqDisciplina (CodigoUnicoCurso, CodigoDisciplina) VALUES (1, 2);
 INSERT INTO PreReqDisciplina (CodigoUnicoCurso, CodigoDisciplina) VALUES (2, 3);
 INSERT INTO PreReqDisciplina (CodigoUnicoCurso, CodigoDisciplina) VALUES (3, 4);
@@ -398,6 +431,8 @@ INSERT INTO PreReqDisciplina (CodigoUnicoCurso, CodigoDisciplina) VALUES (17, 18
 INSERT INTO PreReqDisciplina (CodigoUnicoCurso, CodigoDisciplina) VALUES (18, 19);
 INSERT INTO PreReqDisciplina (CodigoUnicoCurso, CodigoDisciplina) VALUES (19, 20);
 INSERT INTO PreReqDisciplina (CodigoUnicoCurso, CodigoDisciplina) VALUES (20, 1);
+
+-- Popula a tabela ComposicaoCurso com 20 entradas
 INSERT INTO ComposicaoCurso (CodigoUnicoCurso, CodigoDisciplina) VALUES (1, 3);
 INSERT INTO ComposicaoCurso (CodigoUnicoCurso, CodigoDisciplina) VALUES (2, 4);
 INSERT INTO ComposicaoCurso (CodigoUnicoCurso, CodigoDisciplina) VALUES (3, 5);
@@ -418,6 +453,8 @@ INSERT INTO ComposicaoCurso (CodigoUnicoCurso, CodigoDisciplina) VALUES (17, 19)
 INSERT INTO ComposicaoCurso (CodigoUnicoCurso, CodigoDisciplina) VALUES (18, 20);
 INSERT INTO ComposicaoCurso (CodigoUnicoCurso, CodigoDisciplina) VALUES (19, 1);
 INSERT INTO ComposicaoCurso (CodigoUnicoCurso, CodigoDisciplina) VALUES (20, 2);
+
+-- Popula a tabela PreReqCurso com 20 entradas
 INSERT INTO PreReqCurso (CodigoCurso, CodigoCursoPreReq) VALUES (1, 4);
 INSERT INTO PreReqCurso (CodigoCurso, CodigoCursoPreReq) VALUES (2, 5);
 INSERT INTO PreReqCurso (CodigoCurso, CodigoCursoPreReq) VALUES (3, 6);
@@ -438,6 +475,8 @@ INSERT INTO PreReqCurso (CodigoCurso, CodigoCursoPreReq) VALUES (17, 20);
 INSERT INTO PreReqCurso (CodigoCurso, CodigoCursoPreReq) VALUES (18, 1);
 INSERT INTO PreReqCurso (CodigoCurso, CodigoCursoPreReq) VALUES (19, 2);
 INSERT INTO PreReqCurso (CodigoCurso, CodigoCursoPreReq) VALUES (20, 3);
+
+-- Popula a tabela Mensagem com 20 entradas
 INSERT INTO Mensagem (Texto) VALUES ('A prova de quarta foi adiada para sexta-feira.');
 INSERT INTO Mensagem (Texto) VALUES ('Entrega do trabalho final de Arquitetura: dia 10/07.');
 INSERT INTO Mensagem (Texto) VALUES ('Seminário de Biologia Molecular na próxima segunda, às 14h.');
@@ -458,6 +497,8 @@ INSERT INTO Mensagem (Texto) VALUES ('Nova edição do periódico de Computaçã
 INSERT INTO Mensagem (Texto) VALUES ('Encontro de ex-alunos da Faculdade de Medicina: 20/07.');
 INSERT INTO Mensagem (Texto) VALUES ('Campanha de doação de sangue no campus: 29 e 30 de junho.');
 INSERT INTO Mensagem (Texto) VALUES ('Pesquisa de satisfação: responda até 28/06 e ganhe certificado.');
+
+-- Popula a tabela Aviso com 20 entradas
 INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Segunda-feira haverá manutenção dos ar-condicionados das 15h às 16h.', 'Carlos', 'Freitas', '(11) 97543-6930');
 INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Prazo para entrega do relatório de estágio encerra-se em 05/07.', 'Mariana', 'Mendes', '(11) 96155-4483');
 INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Biblioteca fechará mais cedo amanhã, às 18h.', 'Felipe', 'Dantas', '(11) 92604-1828');
@@ -478,6 +519,8 @@ INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES
 INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Acesso ao Wi-Fi central será interrompido para manutenção em 23/06.', 'Carlos', 'Freitas', '(11) 97543-6930');
 INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Feira de profissões no estacionamento principal, dia 05/08.', 'Lorena', 'Ramos', '(11) 94770-4608');
 INSERT INTO Aviso (Texto, NomeUsuario, SobrenomeUsuario, TelefoneUsuario) VALUES ('Pintura de sinalização das salas será feita neste fim de semana.', 'Daniel', 'Moraes', '(11) 91009-6310');
+
+-- Popula a tabela MensagemEnviada com 20 entradas
 INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente) VALUES (1, 'Larissa', 'Campos', '(11) 96413-2160', 'Bruno', 'Carvalho', '(11) 92654-7227');
 INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente) VALUES (2, 'Renata', 'Pinto', '(11) 99830-5304', 'Aline', 'Alves', '(11) 91916-4752');
 INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente) VALUES (3, 'Camila', 'Almeida', '(11) 92519-7224', 'João', 'Silva', '(11) 92824-1409');
@@ -498,6 +541,8 @@ INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario
 INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente) VALUES (18, 'Lucas', 'Oliveira', '(11) 94257-9928', 'Juliana', 'Gomes', '(11) 96977-3664');
 INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente) VALUES (19, 'Fernanda', 'Nogueira', '(11) 98177-9479', 'Felipe', 'Araújo', '(11) 96925-4150');
 INSERT INTO MensagemEnviada (IdMensagem, NomeDestinatario, SobrenomeDestinatario, TelefoneDestinatario, NomeRemetente, SobrenomeRemetente, TelefoneRemetente) VALUES (20, 'Bruno', 'Castro', '(11) 91964-4750', 'Felipe', 'Araújo', '(11) 96925-4150');
+
+ 
 INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade)
 VALUES ('Prática Profissional em Arquitetura', 3, 'Manual de Projeto Arquitetônico', 'Faculdade de Arquitetura');
 INSERT INTO Disciplina (Nome, QtdAulasSemanais, MaterialDidatico, NomeUnidade)
