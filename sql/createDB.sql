@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS Unidade CASCADE;
-
+-- Criação da tabela Unidade
 CREATE TABLE
     Unidade (
         NomeUnidade VARCHAR(50) PRIMARY KEY,
@@ -12,7 +12,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS SalaDeAula CASCADE;
-
+-- Criação da tabela SalaDeAula
 CREATE TABLE
     SalaDeAula (
         NomeUnidade VARCHAR(50) NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS Usuario CASCADE;
-
+-- Criação da tabela Usuario
 CREATE TABLE
     Usuario (
         Nome VARCHAR(50),
@@ -40,7 +40,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS Aluno CASCADE;
-
+-- Criação da tabela Aluno
 CREATE TABLE
     Aluno (
         NomeAluno VARCHAR(50),
@@ -52,7 +52,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS Professor CASCADE;
-
+-- Criação da tabela Professor
 CREATE TABLE
     Professor (
         NomeProf VARCHAR(50),
@@ -66,6 +66,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS FuncionarioAdministrativo CASCADE;
+-- Criação da tabela FuncionarioAdministrativo
 CREATE TABLE
     FuncionarioAdministrativo (
         NomeAdm VARCHAR(50),
@@ -76,7 +77,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS Departamento CASCADE;
-
+-- Criação da tabela Departamento
 CREATE TABLE
     Departamento (
         Codigo INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
@@ -92,7 +93,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS Curso CASCADE;
-
+-- Criação da tabela Curso
 CREATE TABLE
     Curso (
         CodigoUnico INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
@@ -110,7 +111,7 @@ CREATE TABLE
 
 
 DROP TABLE IF EXISTS Disciplina CASCADE;
-
+-- Criação da tabela Disciplina
 CREATE TABLE
     Disciplina (
         Codigo INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
@@ -124,6 +125,7 @@ CREATE TABLE
 
 
 DROP TABLE IF EXISTS Oferecimento CASCADE;
+-- Criação da tabela Oferecimento
 CREATE TABLE
     Oferecimento (
         CodigoDisciplina INTEGER NOT NULL REFERENCES Disciplina (Codigo),
@@ -152,7 +154,7 @@ CREATE TABLE
 
 
 DROP TABLE IF EXISTS Mensagem CASCADE;
-
+-- Criação da tabela Mensagem
 CREATE TABLE
     Mensagem (
         IdMensagem INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
@@ -161,7 +163,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS Aviso CASCADE;
-
+-- Criação da tabela Aviso
 CREATE TABLE
     Aviso (
         IdAviso INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
@@ -178,7 +180,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS ProfDiscResponsaveis CASCADE;
-
+-- Criação da tabela ProfDiscResponsaveis
 CREATE TABLE
     ProfDiscResponsaveis (
         NomeProf VARCHAR(50) NOT NULL,
@@ -199,7 +201,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS Matricula CASCADE;
-
+-- Criação da tabela Matricula
 CREATE TABLE
     Matricula (
         NomeAluno VARCHAR(50) NOT NULL,
@@ -240,7 +242,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS DataLimiteDeMatricula CASCADE;
-
+-- Criação da tabela DataLimiteDeMatricula
 CREATE TABLE
     DataLimiteDeMatricula (
         CodigoDisciplina INTEGER NOT NULL,
@@ -266,7 +268,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS Avaliacao CASCADE;
-
+-- Criação da tabela Avaliacao
 CREATE TABLE
     Avaliacao (
         NomeAluno VARCHAR(50) NOT NULL,
@@ -308,6 +310,7 @@ CREATE TABLE
 
 
 DROP TABLE IF EXISTS PreReqDisciplina CASCADE;
+-- Criação da tabela PreReqDisciplina
 CREATE TABLE
     PreReqDisciplina (
         CodigoUnicoCurso INTEGER NOT NULL REFERENCES Curso (CodigoUnico),
@@ -316,6 +319,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS ComposicaoCurso CASCADE;
+-- Criação da tabela ComposicaoCurso
 CREATE TABLE
     ComposicaoCurso (
         CodigoUnicoCurso INTEGER NOT NULL REFERENCES Curso (CodigoUnico),
@@ -324,6 +328,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS PreReqCurso CASCADE;
+-- Criação da tabela PreReqCurso
 CREATE TABLE
     PreReqCurso (
         CodigoCurso INTEGER NOT NULL REFERENCES Curso (CodigoUnico),
@@ -332,6 +337,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS MensagemEnviada CASCADE;
+-- Criação da tabela MensagemEnviada
 CREATE TABLE
     MensagemEnviada (
         IdMensagem INTEGER NOT NULL REFERENCES Mensagem (IdMensagem),
@@ -360,6 +366,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS Notas CASCADE;
+-- Criação da tabela Notas
 CREATE TABLE
     Notas (
         IdNota INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
@@ -394,6 +401,7 @@ CREATE TABLE
     );
 
 DROP TABLE IF EXISTS Bolsas CASCADE;
+-- Criação da tabela Bolsas
 CREATE TABLE
     Bolsas (
         IdBolsa INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
