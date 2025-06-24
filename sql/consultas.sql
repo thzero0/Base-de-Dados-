@@ -20,7 +20,6 @@ SELECT DISTINCT s.NomeUnidade, s.NumeroSala
 
 
 
--- VIEW
 /*
 Listar todos os alunos com suas respectivas médias escolares,
 sendo a média escolar a média das notas de todas as disciplinas
